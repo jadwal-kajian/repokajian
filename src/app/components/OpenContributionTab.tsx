@@ -12,8 +12,8 @@ const STEPS = [
   },
   {
     num: "02",
-    title: "Fork & Edit",
-    desc: "Edit data/sources.json di branch baru",
+    title: "Fork & Intake",
+    desc: "Tambah file JSON di data/contributions/pending",
   },
   {
     num: "03",
@@ -98,22 +98,20 @@ function DiffLine({ type, num, text }: { type: "add" | "ctx"; num: string; text:
 function MockCodeDiff() {
   return (
     <div className="animate-[fadeIn_0.4s_ease]">
-      <MockWindowChrome url="data/sources.json (edit)" />
+      <MockWindowChrome url="data/contributions/pending/bekal-islam-sunnah.json" />
       <div className="p-4">
         <div className="mb-2 font-mono text-[9.5px] uppercase tracking-[0.04em] text-[var(--g500)]">
-          🔀 Fork · Branch: add-bekal-islam-sunnah
+          🔀 Fork · Branch: contrib/bekal-islam-sunnah
         </div>
         <div className="overflow-hidden rounded-md border border-[var(--g300)] bg-[var(--g100)]">
-          <DiffLine type="ctx" num="42" text="  }," />
-          <DiffLine type="ctx" num="43" text="  {" />
-          <DiffLine type="add" num="44" text='+  "id": "bekalislamsunnah",' />
-          <DiffLine type="add" num="45" text='+  "name": "Bekal Islam Sunnah",' />
-          <DiffLine type="add" num="46" text='+  "platform": "telegram",' />
-          <DiffLine type="add" num="47" text='+  "handle": "bekalislamsunnah",' />
-          <DiffLine type="add" num="48" text='+  "url": "https://t.me/bekalisl..."' />
-          <DiffLine type="add" num="49" text="+ }," />
-          <DiffLine type="ctx" num="50" text="  {" />
-          <DiffLine type="ctx" num="51" text='    "id": "yufidtv",' />
+          <DiffLine type="ctx" num="1" text="{" />
+          <DiffLine type="add" num="2" text='+  "name": "Bekal Islam Sunnah",' />
+          <DiffLine type="add" num="3" text='+  "platform": "tg",' />
+          <DiffLine type="add" num="4" text='+  "source_type": "channel",' />
+          <DiffLine type="add" num="5" text='+  "url": "https://t.me/bekalislamsunnah",' />
+          <DiffLine type="add" num="6" text='+  "handle": "bekalislamsunnah",' />
+          <DiffLine type="add" num="7" text='+  "evidence_url": "https://t.me/bekalislamsunnah"' />
+          <DiffLine type="ctx" num="8" text="}" />
         </div>
         <div className="mt-2.5 flex gap-3 font-mono text-[10px]">
           <span className="text-[var(--olive)]">+6 additions</span>
@@ -200,10 +198,10 @@ function MockCIChecks() {
           </svg>
           <div>
             <div className="text-[12px] font-semibold text-[var(--slate)]">
-              Merged · Source live di /v1/sources.json
+              Merged · Intake siap direview maintainer
             </div>
             <div className="mt-0.5 font-mono text-[10px] text-[var(--g500)]">
-              Next health check: in ~6h
+              Promote step akan memasukkan source approved ke registry
             </div>
           </div>
         </div>
@@ -254,7 +252,7 @@ function ContributionWalkthrough() {
             How it works · live walkthrough
           </h3>
           <p className="mt-0.5 text-[12px] text-[var(--g500)]">
-            Demo: tambah satu channel Telegram baru ke registry
+            Demo: contributor mengusulkan channel lewat intake file
           </p>
         </div>
         <button
@@ -348,9 +346,22 @@ export function OpenContributionTab() {
           Open Contribution (Git PR-based)
         </h2>
         <p className="text-[15px] leading-relaxed text-[var(--g700)] mb-6 max-w-3xl">
-          Siapapun bisa mengusulkan source baru atau update source lewat issue template dan PR,
-          lalu otomatis divalidasi oleh CI sebelum merge.
+          Siapapun bisa mengusulkan source baru lewat file kecil di contribution intake. Registry resmi tetap curated oleh maintainer.
         </p>
+
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+          {[
+            ["1", "Intake", "data/contributions/pending/*.json"],
+            ["2", "CI Review", "validate:contributions"],
+            ["3", "Promote", "data/sources.json"],
+          ].map(([num, title, desc]) => (
+            <div key={title} className="rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-4">
+              <div className="mb-2 font-mono text-[10px] text-[var(--clay)]">0{num}</div>
+              <div className="font-semibold text-[13.5px] text-[var(--slate)]">{title}</div>
+              <div className="mt-1 font-mono text-[11px] text-[var(--g500)] break-all">{desc}</div>
+            </div>
+          ))}
+        </div>
 
         {/* Animated walkthrough */}
         <ContributionWalkthrough />
@@ -359,16 +370,16 @@ export function OpenContributionTab() {
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           <ol className="list-decimal pl-5 space-y-2 text-[14.5px] text-[var(--g700)]">
             <li>Buat issue: <code>Source Add</code> atau <code>Source Update</code>.</li>
-            <li>Fork repo, edit <code>data/sources.json</code>, lalu buka PR.</li>
-            <li>Jalankan validasi lokal: <code>npm run validate:sources</code>.</li>
+            <li>Fork repo, tambah file di <code>data/contributions/pending/</code>, lalu buka PR.</li>
+            <li>Jalankan validasi lokal: <code>npm run validate:contributions</code>.</li>
             <li>CI menjalankan schema/duplicate check + link check warning-only.</li>
           </ol>
 
           <div className="rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-4 text-[13.5px] text-[var(--g700)] space-y-1">
             <p className="font-medium text-[var(--slate)] mb-2">Detail lengkap:</p>
             <p><code>CONTRIBUTING.md</code></p>
-            <p><code>docs/CONTRIBUTOR_GUIDE.md</code></p>
-            <p><code>data/docs/open-contribution.md</code></p>
+            <p><code>docs/CONTRIBUTING.md</code></p>
+            <p><code>docs/in-app/07-contributing.md</code></p>
           </div>
         </div>
 

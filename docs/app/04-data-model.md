@@ -31,6 +31,35 @@ Representasi master source pada `data/sources.json`.
 ## Entity: LatestSnapshotDocument
 Representasi file `data/latest.json`.
 
+---
+
+## Entity: ContributionIntake
+Representasi usulan contributor pada `data/contributions/pending/*.json`.
+
+### Required fields
+- `name: string`
+- `platform: "tg" | "yt" | "ig" | "web" | "wa"`
+- `source_type: "channel" | "group" | "topic" | "site" | "profile"`
+- `url: string`
+- `handle: string`
+- `region: string`
+- `evidence_url: string`
+- `submitted_by: string`
+
+### Optional fields
+- `category: string[]`
+- `tags: string[]`
+- `notes: string`
+
+### Conditional fields
+- Jika `source_type = "topic"`, wajib ada `parent_id` dan `topic_id`.
+- `topic_id` untuk intake topic wajib numerik.
+
+### Promotion
+- File intake tidak otomatis masuk API.
+- Maintainer mempromosikan intake yang approved ke `data/sources.json`.
+- Setelah promote, jalankan validator registry dan snapshot relation.
+
 ### Required top-level
 - `generated_at: string` (datetime)
 - `version: string`

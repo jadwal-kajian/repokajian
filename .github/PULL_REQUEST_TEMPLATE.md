@@ -12,7 +12,9 @@
 ## Validation Checklist
 
 - [ ] Saya hanya mengubah file yang relevan
+- [ ] Jika menambah source dari crowd-source, saya memakai `data/contributions/pending/*.json`
 - [ ] `data/sources.json` valid JSON
+- [ ] `node scripts/validate-contributions.mjs` lolos lokal
 - [ ] `node scripts/validate-sources.mjs` lolos lokal
 - [ ] `npm run lint` lolos
 - [ ] Saya menyertakan bukti/link sumber

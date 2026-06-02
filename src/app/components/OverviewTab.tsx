@@ -138,6 +138,49 @@ function ApiPreview() {
   );
 }
 
+function DataPipelineCards() {
+  const pipelines = [
+    {
+      title: "Registry resmi",
+      file: "data/sources.json",
+      desc: "Source of truth untuk dashboard, health checker, dan static API.",
+      badge: "curated",
+      color: "var(--slate)",
+    },
+    {
+      title: "Discovery / spike",
+      file: "data/spikes/*",
+      desc: "Kandidat otomatis dari eksperimen, termasuk Track B Telegram topics.",
+      badge: "candidate",
+      color: "var(--clay)",
+    },
+    {
+      title: "Contribution intake",
+      file: "data/contributions/pending/*.json",
+      desc: "Usulan crowd-source per file kecil sebelum dipromosikan maintainer.",
+      badge: "PR-ready",
+      color: "var(--olive)",
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+      {pipelines.map((pipeline) => (
+        <div key={pipeline.title} className="rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-4">
+          <div className="mb-3 flex items-center justify-between gap-3">
+            <span className="font-semibold text-[13.5px] text-[var(--slate)]">{pipeline.title}</span>
+            <span className="rounded-full border border-[var(--g300)] px-2 py-0.5 font-mono text-[10px]" style={{ color: pipeline.color }}>
+              {pipeline.badge}
+            </span>
+          </div>
+          <div className="mb-2 font-mono text-[11px] text-[var(--clay)] break-all">{pipeline.file}</div>
+          <p className="text-[12.5px] leading-relaxed text-[var(--g600)]">{pipeline.desc}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 // ===== Section navigation cards =================================
 
 function SectionCards({ onNavigate }: { onNavigate: (tab: string) => void }) {
@@ -157,7 +200,7 @@ function SectionCards({ onNavigate }: { onNavigate: (tab: string) => void }) {
       num: "03",
       tab: "architecture",
       title: "Architecture",
-      desc: "Animasi layer-by-layer alur data dari source ke consumer.",
+      desc: "Registry, discovery, dan contribution intake dalam satu arsitektur.",
       icon: (
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <rect x="1" y="2" width="14" height="4" rx="1.5" stroke="currentColor" strokeWidth="1.3" />
@@ -170,7 +213,7 @@ function SectionCards({ onNavigate }: { onNavigate: (tab: string) => void }) {
       num: "04",
       tab: "app",
       title: "Live Dashboard",
-      desc: "Health monitoring real-time dengan score ring dan trend chart.",
+      desc: "Registry health plus Track B discovery panel.",
       icon: (
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <circle cx="8" cy="8" r="6" stroke="currentColor" strokeWidth="1.3" />
@@ -182,7 +225,7 @@ function SectionCards({ onNavigate }: { onNavigate: (tab: string) => void }) {
       num: "05",
       tab: "contribution",
       title: "Open Contribution",
-      desc: "PR-based workflow dengan GitHub Issue Templates dan CI validasi.",
+      desc: "Crowd-source intake via pending JSON dan CI validasi.",
       icon: (
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
           <circle cx="5" cy="4" r="2" stroke="currentColor" strokeWidth="1.3" />
@@ -283,6 +326,11 @@ export function OverviewTab({
             ))}
           </div>
         )}
+      </div>
+
+      <div className="mb-10">
+        <p className="eyebrow mb-4">Data Pipelines</p>
+        <DataPipelineCards />
       </div>
 
       {/* Two-column layout */}

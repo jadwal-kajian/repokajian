@@ -14,7 +14,7 @@ Dokumen ini jadi panduan singkat agar dokumentasi tetap rapi dan konsisten.
 - `docs/app/` → **source of truth** konten docs untuk UI (`00-...md` s.d. `08-...md`)
 - `docs/roadmap/` → roadmap per fase dan quality gates
 - `docs/archive/` → arsip dokumen lama yang tidak ditampilkan di drawer
-- `data/docs/` → salinan dokumen yang dirender di UI aplikasi (Plan & Roadmap tab)
+- `docs/in-app/` → dokumen curated yang dirender di Docs drawer aplikasi
 
 ## 3) Aturan link
 
@@ -30,7 +30,7 @@ Dokumen ini jadi panduan singkat agar dokumentasi tetap rapi dan konsisten.
 Saat update fitur/flow penting:
 
 1. Edit dokumen utama di `docs/app/`.
-2. Sinkronkan salinannya ke `data/docs/` (nama file harus sama).
+2. Jika perlu tampil di aplikasi, buat/sinkronkan versi curated di `docs/in-app/`.
 3. Cek ulang semua link internal markdown agar tidak putus.
 
 ## 5) Checklist sebelum merge
@@ -38,4 +38,4 @@ Saat update fitur/flow penting:
 - [ ] Link internal markdown valid
 - [ ] Tidak ada duplikasi dokumen yang membingungkan
 - [ ] Dokumen kontribusi hanya di `docs/CONTRIBUTING.md`
-- [ ] `data/docs/` sudah sinkron jika ada perubahan konten untuk UI
+- [ ] `docs/in-app/` sudah sinkron jika ada perubahan konten untuk UI

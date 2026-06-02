@@ -10,23 +10,20 @@
 
 ## Tiga Jalur Data
 
-### 1. Registry Resmi
+### Registry Resmi
 - File: `data/sources.json`
 - Konsumen: dashboard, static API, health checker
 - Mutasi: maintainer atau promotion script
-- Tujuan: data curated yang siap dipakai downstream consumer
 
-### 2. Discovery / Spike
+### Discovery / Spike
 - File: `data/spikes/*`
 - Konsumen: maintainer dan panel discovery
 - Mutasi: workflow/script spike
-- Tujuan: kandidat internal, misalnya Telegram forum topic Track B
 
-### 3. Contribution Intake
+### Contribution Intake
 - File: `data/contributions/pending/*.json`
 - Konsumen: CI validator dan maintainer review
 - Mutasi: contributor GitHub via PR
-- Tujuan: menampung usulan kecil agar contributor tidak perlu mengedit registry besar langsung
 
 ## Komponen Utama
 - Loader: `src/app/lib/data.ts`

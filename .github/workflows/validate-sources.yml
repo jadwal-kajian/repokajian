@@ -4,7 +4,9 @@ on:
   pull_request:
     paths:
       - "data/sources.json"
+      - "data/contributions/**"
       - "scripts/validate-sources.mjs"
+      - "scripts/validate-contributions.mjs"
       - ".github/workflows/validate-sources.yml"
 
 jobs:
@@ -21,6 +23,9 @@ jobs:
 
       - name: Run source validator
         run: node scripts/validate-sources.mjs
+
+      - name: Run contribution intake validator
+        run: node scripts/validate-contributions.mjs
 
       - name: Validate latest.json version format
         run: node scripts/check-versioning.mjs

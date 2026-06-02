@@ -17,7 +17,7 @@ Layer-1 infrastructure untuk ekosistem kajian sunnah Indonesia: **open registry 
   - `data/health/YYYY-MM-DD.json`
 - GitHub Actions cron harian (`00:01 WIB`): `.github/workflows/health-check.yml`
 - Dashboard dual-tab:
-  - **Plan & Roadmap** (render markdown dari `data/docs/`)
+  - **Plan & Roadmap** (render markdown curated dari `docs/in-app/`)
   - **Live Dashboard** (render snapshot + filter + status grouping)
 
 ## Menjalankan project
@@ -48,7 +48,7 @@ npm run check:telegram
 - `data/health/` — arsip snapshot harian
 - `scripts/check-telegram.ts` — checker utama
 - `src/app/components/` — komponen UI dashboard
-- `data/docs/` — dokumen roadmap/steps/handoff untuk tab docs
+- `docs/in-app/` — dokumen curated untuk drawer docs aplikasi
 
 ## Kontribusi
 

@@ -6,8 +6,9 @@ Panduan kontribusi resmi ada di:
 ## Ringkas
 1. Buat issue (Source Add/Update)
 2. Fork + branch `contrib/<ringkas-perubahan>`
-3. Edit `data/sources.json`
+3. Tambahkan file usulan di `data/contributions/pending/<slug>.json`
 4. Jalankan:
+   - `npm run validate:contributions`
    - `npm run validate:sources`
    - `npm run lint`
    - `npm run build`

@@ -8,7 +8,7 @@ import { ArchitectureTab } from "./ArchitectureTab";
 import { OpenContributionTab } from "./OpenContributionTab";
 import { DocsDrawer } from "./DocsDrawer";
 import { FeedbackFAB } from "./FeedbackFAB";
-import type { DocFile, LatestSummary, Source } from "../lib/data";
+import type { DocFile, LatestSummary, Source, TopicDiscovery } from "../lib/data";
 
 type TabKey = "overview" | "roadmap" | "architecture" | "app" | "contribution";
 
@@ -16,10 +16,12 @@ export function AppShell({
   docs,
   sources,
   latest,
+  topicDiscovery,
 }: {
   docs: DocFile[];
   sources: Source[];
   latest: LatestSummary | null;
+  topicDiscovery: TopicDiscovery | null;
 }) {
   const [tab, setTab] = useState<TabKey>("overview");
   const [docsOpen, setDocsOpen] = useState(false);
@@ -89,7 +91,7 @@ export function AppShell({
           <ArchitectureTab />
         </div>
         <div role="tabpanel" id="panel-app" aria-labelledby="tab-app" hidden={tab !== "app"}>
-          <AppTab sources={sources} latest={latest} />
+          <AppTab sources={sources} latest={latest} topicDiscovery={topicDiscovery} />
         </div>
         <div role="tabpanel" id="panel-contribution" aria-labelledby="tab-contribution" hidden={tab !== "contribution"}>
           <OpenContributionTab />
