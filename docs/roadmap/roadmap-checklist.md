@@ -6,7 +6,7 @@ _Last updated: 2026-06-02_
 
 - [x] Phase 1.5 fallback closeout is technically complete on GitHub `main`.
 - [x] Track B authenticated topic freshness spike is usable with guardrails.
-- [ ] GitLab local `main` contains the latest closeout commit.
+- [x] GitLab local `main` contains the latest closeout commit.
 - [ ] Phase 2 has started.
 
 ## Phase 1.5 — Parent-Child Sources
@@ -65,9 +65,9 @@ Note: parent/child visual grouping is deferred by the Phase 1.5 fallback plan be
 
 - [x] GitHub `main` contains commit `91b1cff25a189ab8c820c6f601b02b9593eced70`.
 - [x] GitLab branch `ci/upload-artifacts-always` contains commit `91b1cff25a189ab8c820c6f601b02b9593eced70`.
-- [ ] Merge GitLab branch `ci/upload-artifacts-always` into GitLab local `main`.
-- [ ] Verify GitLab local `origin/main` contains commit `91b1cff25a189ab8c820c6f601b02b9593eced70`.
-- [ ] Keep `.serena/` untracked and out of commits.
+- [x] Merge GitLab branch `ci/upload-artifacts-always` into GitLab local `main`.
+- [x] Verify GitLab local `origin/main` contains commit `91b1cff25a189ab8c820c6f601b02b9593eced70`.
+- [x] Keep `.serena/` untracked and out of commits.
 
 ## Phase 2 — Text Event Extraction MVP
 
