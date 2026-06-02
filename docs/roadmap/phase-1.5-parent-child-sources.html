@@ -395,7 +395,7 @@ tbody tr:nth-child(even) { background: var(--g100); }
   <header class="masthead">
     <p class="eyebrow">Implementation Plan &middot; Vibathon 2026</p>
     <h1>Phase 1.5 &mdash; <em>Parent-Child</em> Sources</h1>
-    <p class="intro">Extend the source data model with hierarchical parent-child relationships when forum topics are actually scrapeable. For @sijadwalkajian, the accepted fallback is group-level only, so this phase closes with region filtering in the Live Dashboard and a checker baseline for supported TG channel/group sources.</p>
+    <p class="intro">The source data model now supports hierarchical parent-child relationships when forum topics are actually scrapeable. For @sijadwalkajian, the accepted fallback is group-level only; this phase is technically closed with region filtering in the Live Dashboard and a checker baseline for supported TG channel/group sources.</p>
   </header>
 
   <!-- Stats bar -->
@@ -409,8 +409,8 @@ tbody tr:nth-child(even) { background: var(--g100); }
       <div class="stat-value">14</div>
     </div>
     <div class="stat-card">
-      <div class="stat-label">New Sources</div>
-      <div class="stat-value">10</div>
+      <div class="stat-label">Publishable Topics</div>
+      <div class="stat-value">0</div>
     </div>
     <div class="stat-card">
       <div class="stat-label">Sub-phases</div>
@@ -469,11 +469,11 @@ tbody tr:nth-child(even) { background: var(--g100); }
         </div>
 
         <div class="milestone phase-a">
-          <div class="milestone-title">Step 2: Add @sijadwalkajian entries</div>
-          <div class="milestone-desc">Add 1 parent group + 9 city topic children to sources.json. Exclude General and Dapur Satu Data Kajian topics.</div>
+          <div class="milestone-title">Step 2: Keep @sijadwalkajian group-level</div>
+          <div class="milestone-desc">Keep only the publishable parent group in sources.json until real topic IDs and parseable topic access are proven. Exclude General and Dapur Satu Data Kajian topics from promotion.</div>
           <div class="tags">
             <span class="tag">sources.json</span>
-            <span class="tag">10 entries</span>
+            <span class="tag">fallback</span>
           </div>
         </div>
 
@@ -529,7 +529,7 @@ tbody tr:nth-child(even) { background: var(--g100); }
 
         <div class="milestone phase-b">
           <div class="milestone-title">Step 7: Visual grouping in dashboard</div>
-          <div class="milestone-desc">Parent cards with expand/collapse chevron. 16px indent + 2px left border for children. Keyboard nav support.</div>
+          <div class="milestone-desc">Deferred because real topic children are not publishable in the Phase 1.5 fallback. Region filtering is the required UI closeout for this phase.</div>
           <div class="tags">
             <span class="tag">AppTab.tsx</span>
             <span class="tag">a11y</span>
@@ -579,9 +579,9 @@ tbody tr:nth-child(even) { background: var(--g100); }
     <div class="sec-header">
       <span class="sec-index">03</span>
       <h2>Source Inventory</h2>
-      <span class="sec-badge">10 entries</span>
+      <span class="sec-badge">1 official + 9 deferred</span>
     </div>
-    <p class="sec-intro">One parent group entry plus nine city-topic children for @sijadwalkajian. Excluded: General (system messages only) and Dapur Satu Data Kajian (operational/internal).</p>
+    <p class="sec-intro">One parent group remains publishable for @sijadwalkajian. Nine city-topic candidates are documented but deferred until topic IDs and reliable topic-level access are proven. Excluded: General (system messages only) and Dapur Satu Data Kajian (operational/internal).</p>
 
     <div class="source-grid">
       <div class="source-card parent">
@@ -596,55 +596,55 @@ tbody tr:nth-child(even) { background: var(--g100); }
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-jakarta</div>
         <div class="source-topic">Jakarta</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">jakarta</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-bogor</div>
         <div class="source-topic">Bogor</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">bogor</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-tangerang</div>
         <div class="source-topic">Tangerang</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">tangerang</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-tangsel</div>
         <div class="source-topic">Tangerang Selatan</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">tangerang-selatan</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-bekasi</div>
         <div class="source-topic">Bekasi</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">bekasi</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-semarang</div>
         <div class="source-topic">Semarang</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">semarang</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-surabaya</div>
         <div class="source-topic">Surabaya</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">surabaya</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-pekanbaru</div>
         <div class="source-topic">Pekanbaru</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">pekanbaru</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
 
       <div class="source-card">
         <div class="source-name">tg-sijadwalkajian-jambi</div>
         <div class="source-topic">Jambi</div>
-        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">jambi</span></div>
+        <div class="tags"><span class="tag">topic</span><span class="tag tag--border">deferred</span></div>
       </div>
     </div>
   </section>

@@ -8,8 +8,9 @@ Dokumen ini adalah sumber utama kontribusi untuk project Vibathon.
    - **Source Add Request** untuk sumber baru
    - **Source Update Request** untuk update sumber existing
 2. Fork repo dan buat branch: `contrib/<ringkas-perubahan>`
-3. Edit `data/sources.json`
+3. Tambahkan file JSON kecil di `data/contributions/pending/<slug>.json`
 4. Jalankan validasi lokal:
+   - `npm run validate:contributions`
    - `npm run validate:sources`
    - `npm run lint`
    - `npm run build`
@@ -18,18 +19,67 @@ Dokumen ini adalah sumber utama kontribusi untuk project Vibathon.
 
 ## Full Guide
 
-### Contract Data Source
+### Tiga Jalur Data
+
+Project ini memakai tiga jalur terpisah:
+
+1. **Registry resmi**: `data/sources.json`
+   - Source of truth untuk dashboard dan static API.
+   - Umumnya hanya maintainer/script promote yang mengubah file ini.
+
+2. **Discovery/spike**: `data/spikes/*`
+   - Hasil eksperimen atau machine-discovered candidates.
+   - Contoh: Track B Telegram topic discovery.
+
+3. **Contribution intake**: `data/contributions/pending/*.json`
+   - Jalur crowd-source untuk contributor GitHub.
+   - Contributor menambahkan file usulan kecil, bukan edit registry besar langsung.
+   - Maintainer mereview lalu promote ke `data/sources.json`.
+
+### Contract Contribution Intake
+
+Setiap file pending minimal wajib memiliki:
+
+- `name`
+- `platform` (`tg`/`ig`/`web`/`wa`/`yt`)
+- `source_type` (`channel`/`group`/`topic`/`site`/`profile`)
+- `url` (http/https valid)
+- `handle`
+- `region`
+- `evidence_url` (link bukti publik)
+- `submitted_by`
+
+Contoh:
+
+```json
+{
+  "name": "Kajian Kota Contoh",
+  "platform": "tg",
+  "source_type": "channel",
+  "url": "https://t.me/kajiancontoh",
+  "handle": "kajiancontoh",
+  "region": "kota-contoh",
+  "category": ["kajian", "jadwal"],
+  "tags": ["kajian", "jadwal"],
+  "evidence_url": "https://t.me/kajiancontoh",
+  "submitted_by": "github-username",
+  "notes": "Akun publik aktif."
+}
+```
+
+### Contract Registry Source
 
 Setiap entri source minimal wajib memiliki:
 
 - `id` (unik)
 - `name`
-- `platform` (`telegram`/`instagram`/`facebook`/`whatsapp`/`website`/`youtube`)
+- `platform` (`tg`/`ig`/`web`/`wa`/`yt`)
+- `source_type` (`channel`/`group`/`topic`/`site`/`profile`)
 - `url` (http/https valid)
 - `handle`
 - `category` (array string, tidak boleh kosong)
 - `region`
-- `priority` (`high`/`medium`/`low`/`archived`)
+- `priority` (number)
 - `added_at` (format `YYYY-MM-DD`)
 
 ### Rules Review
@@ -41,6 +91,7 @@ PR akan ditahan bila:
 - kombinasi `handle+platform` duplikat
 - format URL/tanggal tidak valid
 - tidak ada bukti source aktif
+- contributor mengubah `data/sources.json` tanpa alasan maintainer
 
 ### Governance
 

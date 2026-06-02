@@ -24,4 +24,4 @@ npm run start
 - Source registry: `data/sources.json`
 - Snapshot latest: `data/latest.json`
 - Arsip health: `data/health/`
-- Docs yang dirender app: `data/docs/`
+- Docs yang dirender app: `docs/in-app/`

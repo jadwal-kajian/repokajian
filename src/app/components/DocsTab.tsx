@@ -16,7 +16,7 @@ export function DocsTab({ docs }: { docs: DocFile[] }) {
   if (!active) {
     return (
       <div className="mx-auto max-w-[1180px] px-8 py-20 text-[var(--g500)]">
-        Tidak ada dokumen di <code>data/docs/</code>.
+        Tidak ada dokumen di <code>docs/in-app/</code>.
       </div>
     );
   }

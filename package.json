@@ -9,12 +9,16 @@
     "lint": "eslint",
     "check:telegram": "tsx scripts/check-telegram.ts",
     "validate:sources": "node scripts/validate-sources.mjs",
+    "validate:contributions": "node scripts/validate-contributions.mjs",
     "check:source-links": "node scripts/check-source-links.mjs",
     "check:snapshot-relations": "node scripts/check-snapshot-relations.mjs",
     "check:versioning": "node scripts/check-versioning.mjs",
     "spike:topic-freshness": "tsx scripts/spikes/telegram-topic-freshness-spike.ts",
     "spike:topic-mapping": "tsx scripts/spikes/topic-region-mapping-spike.ts",
     "spike:topic-evaluate": "tsx scripts/spikes/topic-freshness-status-evaluator-spike.ts",
+    "spike:topic-promote-draft": "tsx scripts/spikes/topic-promotion-draft-spike.ts",
+    "spike:topic-promote-review-init": "tsx scripts/spikes/topic-promotion-review-init-spike.ts",
+    "spike:topic-promote-apply": "tsx scripts/spikes/topic-promotion-apply-spike.ts",
     "spike:session-gen": "tsx scripts/spikes/generate-telegram-session.ts"
   },
   "dependencies": {

@@ -4,34 +4,34 @@ import { useEffect, useRef, useState } from "react";
 
 const LAYERS = [
   {
-    id: "sources",
+    id: "intake",
     num: "L0",
-    label: "Sources",
-    desc: "Telegram, Instagram, Facebook, WhatsApp, Website, YouTube — platform kajian yang dipantau.",
+    label: "Contribution Intake",
+    desc: "data/contributions/pending/*.json — file kecil dari contributor GitHub, divalidasi CI sebelum direview maintainer.",
     color: "var(--clay)",
     colorRaw: "#D97757",
   },
   {
-    id: "checker",
+    id: "discovery",
     num: "L1",
-    label: "Health Checker",
-    desc: "GitHub Actions cron — fetch + parse dengan 3× retry, 5s stagger, deteksi last post & subscriber count.",
+    label: "Discovery / Spike",
+    desc: "data/spikes/* — kandidat otomatis dari workflow eksperimen, misalnya Track B Telegram topic freshness.",
     color: "var(--olive)",
     colorRaw: "#788C5D",
   },
   {
     id: "registry",
     num: "L2",
-    label: "Source Registry",
-    desc: "JSON-in-Git — sources.json (metadata) + latest.json (snapshot kesehatan terbaru). Open, versionable, auditable.",
+    label: "Official Registry",
+    desc: "data/sources.json — source of truth curated untuk dashboard, checker, dan static API.",
     color: "#5B8FB9",
     colorRaw: "#5B8FB9",
   },
   {
-    id: "api",
+    id: "checker",
     num: "L3",
-    label: "Static API",
-    desc: "Netlify CDN — zero-auth, zero-cost, global edge. /v1/sources.json, /v1/latest.json, /v1/active.json.",
+    label: "Health + Static API",
+    desc: "Checker menghasilkan latest.json/health archive, lalu static API mempublikasikan registry dan snapshot.",
     color: "var(--clay)",
     colorRaw: "#D97757",
   },
@@ -63,12 +63,12 @@ export function ArchitectureTab() {
     <div className="mx-auto max-w-[1180px] px-8 py-10">
       {/* Header */}
       <div className="mb-10">
-        <p className="eyebrow mb-2">03 · Layer 1 Infrastructure</p>
+        <p className="eyebrow mb-2">03 · Three Data Pipelines</p>
         <h2 className="font-serif text-[clamp(28px,3.4vw,40px)] leading-tight text-[var(--slate)] mb-3">
           Architecture
         </h2>
         <p className="text-[15px] text-[var(--g700)] max-w-[480px] leading-relaxed">
-          Five-layer stack. Hover untuk detail tiap layer.
+          Registry resmi, discovery otomatis, dan crowd-source intake dipisah agar API tetap stabil.
         </p>
       </div>
 
@@ -145,7 +145,7 @@ export function ArchitectureTab() {
             <svg width="12" height="14" viewBox="0 0 12 14" fill="none">
               <path d="M6 1v10M3 8l3 4 3-4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
-            Data flow: sources → checker → registry → API → consumers
+            Data flow: intake/discovery → review → registry → health/API → consumers
           </div>
         </div>
 
@@ -210,6 +210,22 @@ export function ArchitectureTab() {
 
 function LayerDetail({ id }: { id: string }) {
   const details: Record<string, React.ReactNode> = {
+    intake: (
+      <div className="space-y-1 font-mono text-[11px] text-[var(--g600)]">
+        <div>📥 <span className="text-[var(--clay)]">data/contributions/pending/*.json</span></div>
+        <div>✅ validate:contributions</div>
+        <div>👤 contributor GitHub via PR</div>
+        <div>🔎 maintainer review sebelum promote</div>
+      </div>
+    ),
+    discovery: (
+      <div className="space-y-1 font-mono text-[11px] text-[var(--g600)]">
+        <div>🧪 <span className="text-[var(--olive)]">data/spikes/*</span></div>
+        <div>📡 Telegram auth topic freshness</div>
+        <div>🗺️ mapping + evaluator</div>
+        <div>🧾 candidate → review → apply</div>
+      </div>
+    ),
     sources: (
       <div className="space-y-1.5 font-mono text-[11px]">
         {[
@@ -232,7 +248,7 @@ function LayerDetail({ id }: { id: string }) {
         <div>⏰ cron: <span className="text-[var(--olive)]">0 17 * * *</span> (00:01 WIB)</div>
         <div>🔁 retry: <span className="text-[var(--olive)]">3×</span> dengan 5s stagger</div>
         <div>📊 score: freshness → reliability_score</div>
-        <div>🏃 runtime: <span className="text-[var(--olive)]">GitHub Actions</span></div>
+        <div>🌐 /v1/sources.json + /v1/latest.json</div>
       </div>
     ),
     registry: (
