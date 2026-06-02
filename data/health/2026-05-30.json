@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-24T18:03:30.342Z",
+  "generated_at": "2026-05-30T18:06:53.498Z",
   "version": "v1.0.0",
   "total_sources": 32,
   "monitored_sources": 20,
@@ -14,7 +14,7 @@
   "snapshots": [
     {
       "source_id": "tg-mthilyatunnisa",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -40,7 +40,7 @@
     },
     {
       "source_id": "tg-kajianustadzafifi",
-      "last_checked_at": "2026-05-24T18:01:47.200Z",
+      "last_checked_at": "2026-05-30T18:05:14.804Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -66,7 +66,7 @@
     },
     {
       "source_id": "tg-gresikmengaji",
-      "last_checked_at": "2026-05-24T18:01:52.811Z",
+      "last_checked_at": "2026-05-30T18:05:20.291Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -92,7 +92,7 @@
     },
     {
       "source_id": "tg-khalidbasalamahofficial",
-      "last_checked_at": "2026-05-24T18:01:58.554Z",
+      "last_checked_at": "2026-05-30T18:05:25.766Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -118,7 +118,7 @@
     },
     {
       "source_id": "tg-fawaid-kangaswad",
-      "last_checked_at": "2026-05-24T18:02:04.318Z",
+      "last_checked_at": "2026-05-30T18:05:31.231Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -144,7 +144,7 @@
     },
     {
       "source_id": "tg-muflihsafitraofficial",
-      "last_checked_at": "2026-05-24T18:02:09.969Z",
+      "last_checked_at": "2026-05-30T18:05:36.643Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -170,7 +170,7 @@
     },
     {
       "source_id": "tg-ngangsukawruh",
-      "last_checked_at": "2026-05-24T18:02:15.587Z",
+      "last_checked_at": "2026-05-30T18:05:42.112Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -196,7 +196,7 @@
     },
     {
       "source_id": "tg-jadwalkajiankaskus",
-      "last_checked_at": "2026-05-24T18:02:21.223Z",
+      "last_checked_at": "2026-05-30T18:05:47.496Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -222,7 +222,7 @@
     },
     {
       "source_id": "tg-infokajiansunnahsby",
-      "last_checked_at": "2026-05-24T18:02:26.853Z",
+      "last_checked_at": "2026-05-30T18:05:52.815Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -248,7 +248,7 @@
     },
     {
       "source_id": "tg-jadwalkajiansunnah",
-      "last_checked_at": "2026-05-24T18:02:32.483Z",
+      "last_checked_at": "2026-05-30T18:05:58.200Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -274,7 +274,7 @@
     },
     {
       "source_id": "tg-rodjatv",
-      "last_checked_at": "2026-05-24T18:02:38.193Z",
+      "last_checked_at": "2026-05-30T18:06:03.706Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -300,7 +300,7 @@
     },
     {
       "source_id": "tg-yufidtv",
-      "last_checked_at": "2026-05-24T18:02:43.832Z",
+      "last_checked_at": "2026-05-30T18:06:09.217Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -326,7 +326,7 @@
     },
     {
       "source_id": "tg-muslimorid",
-      "last_checked_at": "2026-05-24T18:02:49.548Z",
+      "last_checked_at": "2026-05-30T18:06:14.776Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -352,7 +352,7 @@
     },
     {
       "source_id": "tg-bbgalilmu",
-      "last_checked_at": "2026-05-24T18:02:55.148Z",
+      "last_checked_at": "2026-05-30T18:06:20.166Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -378,7 +378,7 @@
     },
     {
       "source_id": "tg-kajianislampedia",
-      "last_checked_at": "2026-05-24T18:03:01.120Z",
+      "last_checked_at": "2026-05-30T18:06:25.811Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -404,7 +404,7 @@
     },
     {
       "source_id": "tg-jadwalkajianid",
-      "last_checked_at": "2026-05-24T18:03:06.672Z",
+      "last_checked_at": "2026-05-30T18:06:31.163Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -430,7 +430,7 @@
     },
     {
       "source_id": "tg-jadwalkajian-id",
-      "last_checked_at": "2026-05-24T18:03:12.301Z",
+      "last_checked_at": "2026-05-30T18:06:36.577Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -456,7 +456,7 @@
     },
     {
       "source_id": "tg-syafiqrizabasalamah",
-      "last_checked_at": "2026-05-24T18:03:18.096Z",
+      "last_checked_at": "2026-05-30T18:06:42.099Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -482,7 +482,7 @@
     },
     {
       "source_id": "tg-hsi-abdullahroy",
-      "last_checked_at": "2026-05-24T18:03:23.563Z",
+      "last_checked_at": "2026-05-30T18:06:47.409Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -508,7 +508,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian",
-      "last_checked_at": "2026-05-24T18:03:29.479Z",
+      "last_checked_at": "2026-05-30T18:06:52.947Z",
       "platform": "tg",
       "status": "error",
       "confidence_score": 0,
@@ -534,7 +534,7 @@
     },
     {
       "source_id": "web-portalkajian",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -549,7 +549,7 @@
     },
     {
       "source_id": "web-jadwalkajian-com",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -564,7 +564,7 @@
     },
     {
       "source_id": "web-forumkajian",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -579,7 +579,7 @@
     },
     {
       "source_id": "web-cintasedekah",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -594,7 +594,7 @@
     },
     {
       "source_id": "web-hsi",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -609,7 +609,7 @@
     },
     {
       "source_id": "ig-hsi-abdullahroy",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -624,7 +624,7 @@
     },
     {
       "source_id": "ig-hsiberbagi",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -639,7 +639,7 @@
     },
     {
       "source_id": "ig-bmthsi",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -654,7 +654,7 @@
     },
     {
       "source_id": "ig-majalahhsi",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -669,7 +669,7 @@
     },
     {
       "source_id": "ig-hsikibar",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -684,7 +684,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-jakarta",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": 0,
@@ -699,7 +699,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-surabaya",
-      "last_checked_at": "2026-05-24T18:01:41.360Z",
+      "last_checked_at": "2026-05-30T18:05:09.147Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": 0,
