@@ -35,8 +35,6 @@ type SpikeArtifact = {
   topics: TopicFreshnessItem[];
 };
 
-type TelegramEntity = Parameters<TelegramClient["iterMessages"]>[0];
-
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
 const OUTPUT_PATH = process.env.SPIKE_OUTPUT_PATH ?? join(ROOT, "data", "spikes", "telegram-topic-freshness.json");
@@ -57,7 +55,12 @@ function classifyFreshness(lastPostAt: string | null): "active" | "stale" | "dea
 
 function toIso(value: unknown): string | null {
   if (!value) return null;
-  const d = value instanceof Date ? value : new Date(String(value));
+  const d =
+    typeof value === "number"
+      ? new Date(value < 10_000_000_000 ? value * 1000 : value)
+      : value instanceof Date
+        ? value
+        : new Date(String(value));
   return Number.isFinite(d.getTime()) ? d.toISOString() : null;
 }
 
@@ -79,20 +82,6 @@ function newestIso(a: string | null, b: string | null): string | null {
   if (!a) return b;
   if (!b) return a;
   return new Date(a).getTime() >= new Date(b).getTime() ? a : b;
-}
-
-async function getLatestReplyDate(client: TelegramClient, entity: TelegramEntity, topMessageId: number): Promise<string | null> {
-  if (!Number.isFinite(topMessageId) || topMessageId <= 0) return null;
-
-  try {
-    for await (const msg of client.iterMessages(entity, { replyTo: topMessageId, limit: 1 })) {
-      return toIso(asRecord(msg).date);
-    }
-  } catch {
-    return null;
-  }
-
-  return null;
 }
 
 async function fetchForumTopicFreshness(client: TelegramClient, handle: string): Promise<TopicFreshnessItem[]> {
@@ -149,9 +138,9 @@ async function fetchForumTopicFreshness(client: TelegramClient, handle: string):
     const topicId = rawTopicId ? String(rawTopicId) : "unknown-topic-id";
     const topicTitle = getString(t, "title", `Topic ${topicId}`);
     const topMessageId = getNumber(t, "topMessage");
+    const topicDate = toIso(asRecord(t).date);
     const topMessageDate = topMessageDateById.get(topMessageId) ?? null;
-    const latestReplyDate = await getLatestReplyDate(client, entity, topMessageId);
-    const lastPostAt = newestIso(latestReplyDate, topMessageDate);
+    const lastPostAt = newestIso(topicDate, topMessageDate);
     const status = classifyFreshness(lastPostAt);
 
     const checks: CheckItem[] = [
@@ -169,11 +158,11 @@ async function fetchForumTopicFreshness(client: TelegramClient, handle: string):
         name: "freshness",
         ok: lastPostAt !== null,
         details:
-          latestReplyDate !== null
-            ? `Last post timestamp resolved from latest reply in topic topMessage id=${topMessageId}.`
+          topicDate !== null
+            ? `Last post timestamp resolved from forum topic date for topMessage id=${topMessageId}.`
             : topMessageDate !== null
-              ? `Last post timestamp resolved from root topMessage id=${topMessageId}; no newer reply timestamp found.`
-              : "No resolvable last_post_at from topic replies or topMessage in this run.",
+              ? `Last post timestamp resolved from root topMessage id=${topMessageId}.`
+              : "No resolvable last_post_at from forum topic date or topMessage in this run.",
       },
     ];
 
