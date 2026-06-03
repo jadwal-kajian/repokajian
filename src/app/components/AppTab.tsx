@@ -498,16 +498,17 @@ function ScoreExplainer() {
         {open ? "▾ Sembunyikan cara hitung skor" : "▸ Bagaimana skor dihitung?"}
       </button>
       {open && (
-        <div className="mt-3 rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-4 max-w-[520px]">
+        <div className="mt-3 rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-5 max-w-[650px]">
           <p className="eyebrow !text-[10px] mb-3">Reliability Score · Phase 1 (MVP)</p>
           <p className="text-[12.5px] text-[var(--g700)] mb-4 leading-relaxed">
             Skor saat ini dihitung murni dari <strong>freshness</strong> — seberapa baru postingan terakhir.
           </p>
-          <div className="flex flex-col gap-2">
+          <div className="grid gap-2.5">
             {SCORE_TIERS.map((t) => (
-              <div key={t.range} className="flex items-center gap-3">
-                <span className={`font-serif text-[22px] leading-none w-12 text-right ${t.color}`}>{t.range}</span>
-                <span className="text-[12px] text-[var(--g700)]">{t.label}</span>
+              <div key={t.range} className="grid grid-cols-[72px_1px_minmax(0,1fr)] items-center gap-4">
+                <span className={`font-serif text-[21px] leading-none tabular-nums text-right ${t.color}`}>{t.range}</span>
+                <span className="h-6 w-px bg-[var(--g200)]" aria-hidden="true" />
+                <span className="text-[12.5px] leading-5 text-[var(--g700)]">{t.label}</span>
               </div>
             ))}
           </div>
