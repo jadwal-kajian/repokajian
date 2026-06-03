@@ -15,7 +15,8 @@ export interface Snapshot {
   last_checked_at: string;
   platform: Platform;
   status: HealthStatus;
-  confidence_score: number;
+  confidence_score?: number;
+  reliability_score?: number;
   checks: {
     name: string;
     ok: boolean;
@@ -36,6 +37,15 @@ export interface LatestSummary {
   monitored_sources: number;
   by_status: Record<HealthStatus, number>;
   snapshots: Snapshot[];
+}
+
+export interface HealthHistoryPoint {
+  date: string;
+  generated_at: string;
+  avg_score: number;
+  active_count: number;
+  dead_count: number;
+  total_sources: number;
 }
 
 export type TopicDiscoveryStatus = "active" | "stale" | "dead" | "blocked" | "ignored" | "error";
@@ -118,6 +128,21 @@ export async function loadSources(): Promise<Source[]> {
   }
 }
 
+function confidenceToPercent(score?: number | null): number | null {
+  if (typeof score !== "number") return null;
+  return Math.round(score * 100);
+}
+
+function snapshotScoreToPercent(snapshot: Snapshot): number | null {
+  if (typeof snapshot.confidence_score === "number") {
+    return confidenceToPercent(snapshot.confidence_score);
+  }
+  if (typeof snapshot.reliability_score === "number") {
+    return Math.round(snapshot.reliability_score);
+  }
+  return null;
+}
+
 export async function loadLatest(): Promise<LatestSummary | null> {
   try {
     const raw = await readFile(LATEST_PATH, "utf-8");
@@ -125,6 +150,39 @@ export async function loadLatest(): Promise<LatestSummary | null> {
   } catch {
     return null;
   }
+}
+
+export async function loadHealthHistory(): Promise<HealthHistoryPoint[]> {
+  let entries: string[] = [];
+  try {
+    entries = await readdir(join(ROOT, "data", "health"));
+  } catch {
+    return [];
+  }
+
+  const history: HealthHistoryPoint[] = [];
+  for (const filename of entries.filter((f) => f.endsWith(".json")).sort()) {
+    try {
+      const raw = await readFile(join(ROOT, "data", "health", filename), "utf-8");
+      const snapshot = JSON.parse(raw) as LatestSummary;
+      const scored = snapshot.snapshots
+        .map((item) => snapshotScoreToPercent(item))
+        .filter((score): score is number => score !== null);
+      const byStatus = snapshot.by_status ?? {};
+      history.push({
+        date: filename.replace(/\.json$/, ""),
+        generated_at: snapshot.generated_at,
+        avg_score: scored.length > 0 ? Math.round(scored.reduce((sum, score) => sum + score, 0) / scored.length) : 0,
+        active_count: byStatus.active ?? 0,
+        dead_count: byStatus.dead ?? 0,
+        total_sources: snapshot.total_sources,
+      });
+    } catch {
+      continue;
+    }
+  }
+
+  return history.slice(-30);
 }
 
 export async function loadTopicDiscovery(): Promise<TopicDiscovery | null> {

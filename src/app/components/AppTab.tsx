@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { HealthStatus, LatestSummary, Platform, Snapshot, Source, TopicDiscovery, TopicDiscoveryStatus } from "../lib/data";
+import type { HealthHistoryPoint, HealthStatus, LatestSummary, Platform, Snapshot, Source, TopicDiscovery, TopicDiscoveryStatus } from "../lib/data";
 
 // ===== Config ==================================================
 
@@ -89,21 +89,6 @@ function generateHistory(id: string, status: HealthStatus, score: number | null)
   });
 }
 
-function generateAggregate(rows: { status: HealthStatus; score: number | null; id: string }[]) {
-  return Array.from({ length: 30 }, (_, i) => {
-    const scored = rows.map((r) => {
-      const h = generateHistory(r.id, r.status, r.score);
-      return h[i];
-    }).filter((v): v is number => v !== null);
-    return {
-      day: i,
-      avgScore: scored.length > 0 ? Math.round(scored.reduce((a, b) => a + b, 0) / scored.length) : 0,
-      activeCount: scored.filter((v) => v >= 60).length,
-      deadCount: scored.filter((v) => v < 30).length,
-    };
-  });
-}
-
 // ===== SVG Components =========================================
 
 function ScoreRing({ score, status, size = 44 }: { score: number | null; status: HealthStatus; size?: number }) {
@@ -182,7 +167,7 @@ function Sparkline({ data, width = 70, height = 26, color = "#788C5D" }: {
   );
 }
 
-function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
+function TrendChart({ data }: { data: HealthHistoryPoint[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [w, setW] = useState(800);
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
@@ -194,17 +179,30 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
     return () => obs.disconnect();
   }, []);
 
+  if (data.length === 0) {
+    return (
+      <div ref={containerRef} className="rounded-xl border border-[var(--g300)] bg-[var(--paper)] p-5">
+        <h3 className="font-semibold text-[15px] text-[var(--slate)]">Ecosystem Health</h3>
+        <p className="mt-2 font-mono text-[11px] text-[var(--g500)] tracking-[0.02em]">
+          Belum ada arsip health untuk ditampilkan.
+        </p>
+      </div>
+    );
+  }
+
   const h = w < 500 ? 160 : 200;
   const pad = { t: 20, r: 16, b: 28, l: 36 };
   const iw = w - pad.l - pad.r;
   const ih = h - pad.t - pad.b;
-  const sx = iw / (data.length - 1);
+  const sx = iw / Math.max(1, data.length - 1);
   const sy = (v: number) => pad.t + ih - (v / 100) * ih;
+  const maxCount = Math.max(1, ...data.flatMap((d) => [d.active_count, d.dead_count]));
+  const countY = (v: number) => pad.t + ih - (v / maxCount) * ih;
 
   let linePath = "", areaPath = "";
   data.forEach((d, i) => {
     const x = pad.l + i * sx;
-    const y = sy(d.avgScore);
+    const y = sy(d.avg_score);
     linePath += (i === 0 ? "M" : " L") + x + "," + y;
     if (i === 0) areaPath = `M${x},${pad.t + ih} L${x},${y}`;
     else areaPath += ` L${x},${y}`;
@@ -223,7 +221,7 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
       <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="font-semibold text-[15px] text-[var(--slate)]">Ecosystem Health</h3>
-          <p className="font-mono text-[11px] text-[var(--g500)] mt-0.5 tracking-[0.02em]">Avg score · last 30 days (simulated)</p>
+          <p className="font-mono text-[11px] text-[var(--g500)] mt-0.5 tracking-[0.02em]">Avg score · health archive ({data.length} snapshots)</p>
         </div>
         <div className="flex items-center gap-4">
           <ChartLegend color="var(--clay)" label="Avg Score" />
@@ -251,11 +249,11 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
               fontFamily="var(--font-mono-stack)">{t}</text>
           </g>
         ))}
-        {data.map((_, i) => {
+        {data.map((d, i) => {
           const step = Math.ceil(data.length / 6);
           if (i % step !== 0 && i !== data.length - 1) return null;
           const x = pad.l + i * sx;
-          const label = i === data.length - 1 ? "now" : `-${data.length - 1 - i}d`;
+          const label = i === data.length - 1 ? "latest" : d.date.slice(5);
           return <text key={i} x={x} y={h - 8} fontSize="9.5" fill="var(--g500)" textAnchor="middle"
             fontFamily="var(--font-mono-stack)">{label}</text>;
         })}
@@ -264,7 +262,7 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
           let p = "";
           data.forEach((d, i) => {
             const x = pad.l + i * sx;
-            const y = pad.t + ih - (d.activeCount / 15) * ih;
+            const y = countY(d.active_count);
             p += (i === 0 ? "M" : " L") + x + "," + y;
           });
           return p;
@@ -273,7 +271,7 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
           let p = "";
           data.forEach((d, i) => {
             const x = pad.l + i * sx;
-            const y = pad.t + ih - (d.deadCount / 15) * ih;
+            const y = countY(d.dead_count);
             p += (i === 0 ? "M" : " L") + x + "," + y;
           });
           return p;
@@ -283,7 +281,7 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
           <g>
             <line x1={pad.l + hoverIdx * sx} y1={pad.t} x2={pad.l + hoverIdx * sx} y2={pad.t + ih}
               stroke="var(--slate)" strokeWidth="1" strokeDasharray="2 2" opacity="0.25" />
-            <circle cx={pad.l + hoverIdx * sx} cy={sy(data[hoverIdx].avgScore)}
+            <circle cx={pad.l + hoverIdx * sx} cy={sy(data[hoverIdx].avg_score)}
               r="4" fill="var(--paper)" stroke="var(--clay)" strokeWidth="2" />
           </g>
         )}
@@ -292,9 +290,9 @@ function TrendChart({ data }: { data: ReturnType<typeof generateAggregate> }) {
         <div className="pointer-events-none absolute top-12 z-10 rounded-md bg-[var(--slate)] px-3 py-2 shadow-md"
           style={{ left: Math.min(Math.max(pad.l + hoverIdx * sx - 55, 12), w - 115), minWidth: 110 }}>
           <div className="font-mono text-[10px] text-[var(--ivory)]/60 mb-1.5">
-            {hoverIdx === data.length - 1 ? "Today" : `${data.length - 1 - hoverIdx}d ago`}
+            {data[hoverIdx].date}
           </div>
-          {[["Avg", data[hoverIdx].avgScore], ["Active", data[hoverIdx].activeCount], ["Dead", data[hoverIdx].deadCount]].map(([k, v]) => (
+          {[["Avg", data[hoverIdx].avg_score], ["Active", data[hoverIdx].active_count], ["Dead", data[hoverIdx].dead_count]].map(([k, v]) => (
             <div key={String(k)} className="flex justify-between gap-3 font-mono text-[10px]">
               <span className="text-[var(--ivory)]/70">{k}</span>
               <span className="font-semibold text-[var(--ivory)]">{v}</span>
@@ -643,10 +641,12 @@ export function AppTab({
   sources,
   latest,
   topicDiscovery,
+  healthHistory,
 }: {
   sources: Source[];
   latest: LatestSummary | null;
   topicDiscovery: TopicDiscovery | null;
+  healthHistory: HealthHistoryPoint[];
 }) {
   const [statusFilter, setStatusFilter] = useState<"all" | HealthStatus>("all");
   const [platformFilter, setPlatformFilter] = useState<"all" | Platform>("all");
@@ -748,14 +748,7 @@ export function AppTab({
     return r;
   }, [rows, statusFilter, platformFilter, regionFilter, search, sortBy]);
 
-  const aggregateHistory = useMemo(() =>
-    generateAggregate(rows.map(({ source, snapshot }) => ({
-      id: source.id,
-      status: snapshot?.status ?? "unmonitored",
-      score: confidenceToPercent(snapshot?.confidence_score),
-    }))),
-    [rows]
-  );
+  const aggregateHistory = healthHistory;
 
   const oldestDeadLabel = useMemo(() => {
     if (!latest) return "lama";
