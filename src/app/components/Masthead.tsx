@@ -60,7 +60,7 @@ export function Masthead({
             transitionDelay: "0ms",
           }}
         >
-          <span className="eyebrow">Vibathon 2026 · HSI IT Division</span>
+          <span className="eyebrow">Kajian Source List · Open Registry</span>
         </div>
 
         {/* Title */}

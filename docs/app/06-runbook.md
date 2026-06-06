@@ -17,6 +17,7 @@
    - Jalankan `npm run validate:sources`
    - Pastikan `id` unique dan immutable
    - Pastikan prefix `id` match `platform`
+   - `topic_id` untuk `source_type=topic` wajib numerik; strict mode aktif di script default
 2. Validasi parent-topic Telegram:
    - `source_type=topic` wajib punya `parent_id` dan `topic_id`
    - `parent_id` harus mengarah ke source parent yang ada
@@ -49,6 +50,49 @@
 5. Jika tidak parseable, tandai `blocked` dan jangan klaim source `active`.
 6. Simpan catatan verifikasi di PR (topic, topic_id, timestamp cek).
 
+## Track B Manual Topic Promotion
+**Tujuan:** mempromosikan topic hasil Track B ke `data/sources.json` secara terbatas dan reviewable.
+
+**Trigger:** gunakan hanya setelah gate Track B `GO WITH GUARDRAILS`, artifact evaluated valid, dan reviewer memilih topic yang benar-benar akan masuk registry utama.
+
+**Langkah Verifikasi:**
+1. Generate draft kandidat:
+   ```bash
+   npm run spike:topic-promote-draft
+   ```
+2. Generate file review:
+   ```bash
+   npm run spike:topic-promote-review-init
+   ```
+3. Edit `data/spikes/topic-promotion-review.json`:
+   - Set hanya topic pilihan menjadi `"approved": true`.
+   - Untuk guardrail saat ini, approve maksimal 5 topic sample.
+   - Sample 5 topic yang dipakai untuk rollout awal:
+     - `tg-sijadwalkajian-yogyakarta`
+     - `tg-sijadwalkajian-cimahi`
+     - `tg-sijadwalkajian-bandung`
+     - `tg-sijadwalkajian-kuningan`
+     - `tg-sijadwalkajian-depok`
+   - Biarkan topic lain `"approved": false`.
+   - Set top-level `"confirm_promote": true`.
+4. Apply promotion:
+   ```bash
+   npm run spike:topic-promote-apply
+   ```
+5. Validasi hasil:
+   ```bash
+   npm run validate:sources
+   npm run check:telegram
+   npm run build
+   ```
+
+**Expected Result:** hanya topic yang `approved=true` masuk atau ter-update di `data/sources.json`; tidak ada duplicate `id`; build tetap sukses.
+
+**Jika Gagal:**
+- Jika apply menolak, cek `confirm_promote=true` dan minimal satu row `approved=true`.
+- Jika validasi source gagal, perbaiki `source_id`, `parent_id`, `topic_id`, atau revert perubahan `data/sources.json` dari diff sebelum commit.
+- Jangan bulk-promote 77 mapped topics; group-level fallback tetap baseline produksi.
+
 ## Data Tidak Tampil di Dashboard
 1. Cek `data/latest.json`
 2. Jalankan `npm run build`
@@ -58,7 +102,7 @@
 ## PR Validasi Gagal
 1. Jalankan `npm run validate:sources`
 2. Cek duplikasi `id`, mismatch `id` prefix vs `platform`
-3. Untuk topic: cek `parent_id/topic_id`
+3. Untuk topic: cek `parent_id/topic_id`; placeholder non-numeric akan gagal karena strict mode aktif
 4. Pastikan `added_at` sesuai format yang dipakai kontrak proyek
 
 ## Recovery Cepat

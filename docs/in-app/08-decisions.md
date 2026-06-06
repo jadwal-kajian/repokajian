@@ -14,3 +14,10 @@
 - Dokumentasi dikonsolidasi ke `docs/`
 - Kontribusi dipusatkan ke `docs/CONTRIBUTING.md`
 - Konvensi docs ditetapkan di `docs/README.md`
+
+## 2026-06-04
+- Final Track B decision: `GO WITH GUARDRAILS`
+- Group-level fallback tetap menjadi baseline produksi
+- Live dashboard tetap menampilkan 5-topic Track B sample agar spike tetap terlihat
+- Bulk-promote 77 mapped topics ke `data/sources.json` ditolak untuk saat ini
+- Promosi topic dari Track B ke registry utama wajib lewat review eksplisit

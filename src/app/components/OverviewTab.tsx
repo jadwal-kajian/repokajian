@@ -297,7 +297,7 @@ export function OverviewTab({
           transform: visible ? "translateY(0)" : "translateY(12px)",
         }}
       >
-        <p className="eyebrow mb-3">Vibathon 2026 · HSI IT Division</p>
+        <p className="eyebrow mb-3">Kajian Source List · Open Registry</p>
         <h2 className="font-serif text-[clamp(28px,3.8vw,44px)] leading-tight text-[var(--slate)] mb-4 max-w-[26ch]">
           Open registry sumber kajian dengan{" "}
           <em className="italic text-[var(--clay)]">automated health monitoring</em>.

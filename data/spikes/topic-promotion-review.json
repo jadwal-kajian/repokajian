@@ -1,7 +1,7 @@
 {
   "generated_at": "2026-06-02T08:05:05.761Z",
   "candidates_file": "/var/mnt/hdd/projects/HSI_Vibathon/codebase/vibathon-2026/data/spikes/topic-promotion-candidates.json",
-  "confirm_promote": false,
+  "confirm_promote": true,
   "review_instruction": "Set approved=true for selected rows, then set confirm_promote=true before running spike:topic-promote-apply.",
   "summary": {
     "total_topics": 79,
@@ -23,7 +23,7 @@
       "region": "yogyakarta",
       "status": "active",
       "url": "https://t.me/sijadwalkajian/201",
-      "approved": false,
+      "approved": true,
       "reviewer_note": ""
     },
     {
@@ -34,7 +34,7 @@
       "region": "cimahi",
       "status": "active",
       "url": "https://t.me/sijadwalkajian/2303",
-      "approved": false,
+      "approved": true,
       "reviewer_note": ""
     },
     {
@@ -45,7 +45,7 @@
       "region": "bandung",
       "status": "active",
       "url": "https://t.me/sijadwalkajian/66",
-      "approved": false,
+      "approved": true,
       "reviewer_note": ""
     },
     {
@@ -56,7 +56,7 @@
       "region": "kuningan",
       "status": "active",
       "url": "https://t.me/sijadwalkajian/1169",
-      "approved": false,
+      "approved": true,
       "reviewer_note": ""
     },
     {
@@ -67,7 +67,7 @@
       "region": "depok",
       "status": "active",
       "url": "https://t.me/sijadwalkajian/10",
-      "approved": false,
+      "approved": true,
       "reviewer_note": ""
     },
     {

@@ -374,10 +374,10 @@ function TopicDiscoveryPanel({ discovery }: { discovery: TopicDiscovery | null }
             <div className="mt-4">
               <div className="mb-2 flex items-center justify-between gap-3">
                 <span className="font-mono text-[10.5px] uppercase tracking-[0.12em] text-[var(--g500)]">
-                  Promotion candidates
+                  Track B sample candidates
                 </span>
                 <span className="font-mono text-[10.5px] text-[var(--g500)]">
-                  {promotable.length} ready
+                  showing {candidates.length} of {promotable.length} ready
                 </span>
               </div>
               <div className="grid gap-2 sm:grid-cols-2">
@@ -404,7 +404,7 @@ function TopicDiscoveryPanel({ discovery }: { discovery: TopicDiscovery | null }
                 <div className="grid gap-1.5 font-mono text-[11px] text-[var(--g600)] sm:grid-cols-3">
                   <span>1. topic-promotion-candidates.json</span>
                   <span>2. topic-promotion-review.json</span>
-                  <span>3. data/sources.json</span>
+                  <span>3. keep 5-topic dashboard sample</span>
                 </div>
               </div>
             </div>

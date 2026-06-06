@@ -1,7 +1,7 @@
 {
   "$schema": "./schema.json",
   "version": "0.1.0",
-  "updated_at": "2026-05-11",
+  "updated_at": "2026-06-06",
   "license": "CC-BY-SA-4.0",
   "sources": [
     {
@@ -680,52 +680,134 @@
       "notes": "Parent Telegram forum group for city topics."
     },
     {
-      "id": "tg-sijadwalkajian-jakarta",
-      "name": "Sijadwal Kajian - Jakarta",
+      "id": "tg-sijadwalkajian-yogyakarta",
+      "name": "Sijadwal Kajian - Yogyakarta",
       "platform": "tg",
       "source_type": "topic",
       "parent_id": "tg-sijadwalkajian",
-      "topic_id": "REPLACE_WITH_REAL_TOPIC_ID",
-      "url": "https://t.me/sijadwalkajian/REPLACE_WITH_REAL_TOPIC_ID",
+      "topic_id": "201",
+      "url": "https://t.me/sijadwalkajian/201",
       "handle": "sijadwalkajian",
       "category": [
-        "kajian",
-        "city"
+        "aggregator",
+        "jadwal",
+        "kajian"
       ],
-      "region": "jakarta",
+      "region": "yogyakarta",
       "language": "id",
       "priority": 2,
       "tags": [
-        "topic",
-        "city"
+        "telegram-topic",
+        "track-b",
+        "sijadwalkajian"
       ],
-      "verified": false,
-      "added_at": "2026-05-17",
-      "notes": "Topic placeholder pending real numeric topic_id verification."
+      "verified": true,
+      "added_at": "2026-06-02",
+      "notes": "Promoted draft from Track B topic discovery. Status: active; last_post_at: 2026-06-01T21:45:38.000Z."
     },
     {
-      "id": "tg-sijadwalkajian-surabaya",
-      "name": "Sijadwal Kajian - Surabaya",
+      "id": "tg-sijadwalkajian-cimahi",
+      "name": "Sijadwal Kajian - Cimahi",
       "platform": "tg",
       "source_type": "topic",
       "parent_id": "tg-sijadwalkajian",
-      "topic_id": "REPLACE_WITH_REAL_TOPIC_ID",
-      "url": "https://t.me/sijadwalkajian/REPLACE_WITH_REAL_TOPIC_ID",
+      "topic_id": "2303",
+      "url": "https://t.me/sijadwalkajian/2303",
       "handle": "sijadwalkajian",
       "category": [
-        "kajian",
-        "city"
+        "aggregator",
+        "jadwal",
+        "kajian"
       ],
-      "region": "surabaya",
+      "region": "cimahi",
       "language": "id",
       "priority": 2,
       "tags": [
-        "topic",
-        "city"
+        "telegram-topic",
+        "track-b",
+        "sijadwalkajian"
       ],
-      "verified": false,
-      "added_at": "2026-05-17",
-      "notes": "Topic placeholder pending real numeric topic_id verification."
+      "verified": true,
+      "added_at": "2026-06-02",
+      "notes": "Promoted draft from Track B topic discovery. Status: active; last_post_at: 2026-06-01T21:44:20.000Z."
+    },
+    {
+      "id": "tg-sijadwalkajian-bandung",
+      "name": "Sijadwal Kajian - Bandung",
+      "platform": "tg",
+      "source_type": "topic",
+      "parent_id": "tg-sijadwalkajian",
+      "topic_id": "66",
+      "url": "https://t.me/sijadwalkajian/66",
+      "handle": "sijadwalkajian",
+      "category": [
+        "aggregator",
+        "jadwal",
+        "kajian"
+      ],
+      "region": "bandung",
+      "language": "id",
+      "priority": 2,
+      "tags": [
+        "telegram-topic",
+        "track-b",
+        "sijadwalkajian"
+      ],
+      "verified": true,
+      "added_at": "2026-06-02",
+      "notes": "Promoted draft from Track B topic discovery. Status: active; last_post_at: 2026-06-01T21:44:09.000Z."
+    },
+    {
+      "id": "tg-sijadwalkajian-kuningan",
+      "name": "Sijadwal Kajian - Kuningan",
+      "platform": "tg",
+      "source_type": "topic",
+      "parent_id": "tg-sijadwalkajian",
+      "topic_id": "1169",
+      "url": "https://t.me/sijadwalkajian/1169",
+      "handle": "sijadwalkajian",
+      "category": [
+        "aggregator",
+        "jadwal",
+        "kajian"
+      ],
+      "region": "kuningan",
+      "language": "id",
+      "priority": 2,
+      "tags": [
+        "telegram-topic",
+        "track-b",
+        "sijadwalkajian"
+      ],
+      "verified": true,
+      "added_at": "2026-06-02",
+      "notes": "Promoted draft from Track B topic discovery. Status: active; last_post_at: 2026-06-01T21:43:25.000Z."
+    },
+    {
+      "id": "tg-sijadwalkajian-depok",
+      "name": "Sijadwal Kajian - Depok",
+      "platform": "tg",
+      "source_type": "topic",
+      "parent_id": "tg-sijadwalkajian",
+      "topic_id": "10",
+      "url": "https://t.me/sijadwalkajian/10",
+      "handle": "sijadwalkajian",
+      "category": [
+        "aggregator",
+        "jadwal",
+        "kajian"
+      ],
+      "region": "depok",
+      "language": "id",
+      "priority": 2,
+      "tags": [
+        "telegram-topic",
+        "track-b",
+        "sijadwalkajian"
+      ],
+      "verified": true,
+      "added_at": "2026-06-02",
+      "notes": "Promoted draft from Track B topic discovery. Status: active; last_post_at: 2026-06-01T21:42:34.000Z."
     }
   ]
 }

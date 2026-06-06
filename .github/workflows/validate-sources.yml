@@ -22,7 +22,7 @@ jobs:
           node-version: "20"
 
       - name: Run source validator
-        run: node scripts/validate-sources.mjs
+        run: STRICT_TOPIC_ID=1 node scripts/validate-sources.mjs
 
       - name: Run contribution intake validator
         run: node scripts/validate-contributions.mjs

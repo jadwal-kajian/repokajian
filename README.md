@@ -1,4 +1,4 @@
-# Source List Kajian Sunnah Indonesia (Vibathon 2026)
+# Source List Kajian Sunnah Indonesia
 
 Layer-1 infrastructure untuk ekosistem kajian sunnah Indonesia: **open registry sumber kajian** + **automated health monitoring** (Phase 1: Telegram) agar aggregator/app lain bisa konsumsi data yang lebih reliable.
 
@@ -69,3 +69,5 @@ npm run build
 
 - Code: [MIT](./LICENSE)
 - Data & docs: [CC-BY-SA 4.0](./data/LICENSE)
+
+Originated during Vibathon 2026 - HSI IT Division.

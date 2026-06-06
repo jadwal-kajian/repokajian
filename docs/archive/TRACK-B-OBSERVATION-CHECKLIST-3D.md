@@ -63,9 +63,9 @@ Memvalidasi kelayakan implementasi authenticated topic freshness sebelum integra
 ---
 
 ## Output yang wajib disiapkan
-- [ ] Gate report: `TRACK-B-GATE-REPORT-YYYY-MM-DD.md`
-- [ ] Keputusan final: `GO` / `GO WITH GUARDRAILS` / `NO-GO`
-- [ ] Next step yang jelas (integrasi checker utama atau perbaikan spike)
+- [x] Gate report: `TRACK-B-GATE-REPORT-2026-06-02.md`
+- [x] Keputusan final: `GO WITH GUARDRAILS`
+- [x] Next step yang jelas: keep 5-topic Track B dashboard sample, maintain group-level fallback, and draft secret rotation/re-bootstrap runbook before main-checker integration.
 
 ---
 
@@ -129,3 +129,33 @@ Day-2 checklist status:
 
 Required next action:
 - Continue Day-3 observation with `Dapur Satu Data Kajian` and `General` counted as intentional ignores.
+
+### 2026-06-04 — Day-3 scheduled run
+
+Findings:
+- Workflow triggered by schedule on GitHub Actions: <https://github.com/t-onluring/vibathon-2026/actions/runs/26910969856>
+- Run branch/SHA: `main` / `ae0511438eff8a9f912b7e0c3a999ea01f5de2d4`.
+- Job conclusion: success.
+- Freshness step connected to Telegram MTProto and fetched 79 forum topics.
+- Freshness `run.status = ok`; `last_post_at` was resolved for 79/79 topics.
+- Retry usage: attempt 1/2 succeeded; no retry needed.
+- Artifact uploaded successfully:
+  - name: `telegram-auth-topic-freshness`
+  - run: <https://github.com/t-onluring/vibathon-2026/actions/runs/26910969856>
+  - artifact id: `7395889749`
+  - digest: `sha256:03f79a10428cf7d9c26bee8d4bece53c862071cac716c015c5a2c29cb94cffd4`
+- Mapping/evaluator results:
+  - mapping: `total_topics = 79`, `mapped_topics = 77`, `ignored_topics = 2`, `unmapped_topics = 0`
+  - evaluator: `total_topics = 79`, `active = 31`, `stale = 42`, `dead = 4`, `blocked = 0`, `ignored = 2`, `error = 0`
+- Secrets were masked as `***` in logs.
+- Downloaded artifact inspection found all three expected JSON files and no suspicious raw-message/secret keys beyond the sanitized run `message` summary.
+
+Day-3 checklist status:
+- Workflow execution: completed successfully without timeout or retry.
+- Artifact checks: completed; all three expected JSON artifacts were present.
+- Semantic checks: completed; `run.status = ok`, not `needs_setup` or `error`.
+- Mapping checks: completed; `mapped_topics = 77`, `ignored_topics = 2`, `unmapped_topics = 0`.
+- Security checks: no raw secret values or raw message text observed in inspected logs/artifacts.
+
+Required next action:
+- Continue with guardrail follow-up: keep the 5-topic dashboard sample visible, maintain group-level fallback, and draft secret rotation/re-bootstrap policy before main-checker integration.

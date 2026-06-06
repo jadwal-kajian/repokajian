@@ -60,3 +60,17 @@
   - Tegakkan test matrix minimal (8 case).
   - Finalisasi contoh `sources.json` parent+topic dengan `topic_id` real.
   - Terapkan UI states v1 untuk trust/error communication.
+
+## 2026-06-04 (Track B final gate)
+- **Konteks:** Authenticated Telegram topic freshness sudah melewati 3-day observation window dengan 3 run sukses, 79/79 topic resolved, 77 mapped, 2 ignored, 0 unmapped, 0 blocked, dan 0 error.
+- **Keputusan:**
+  - Final Track B decision: `GO WITH GUARDRAILS`.
+  - Group-level fallback tetap menjadi baseline produksi.
+  - Live dashboard tetap menampilkan 5-topic Track B sample agar spike tetap terlihat tanpa bulk-promote semua topic.
+  - Semua promosi topic dari Track B ke registry utama wajib lewat review eksplisit.
+- **Alternatif ditolak:**
+  - Full `GO` langsung ke main checker (ditolak: masih ada dependensi operasional pada MTProto session secret).
+  - `NO-GO` (ditolak: observation window stabil dan artifact valid).
+  - Bulk-promote 77 mapped topics ke `data/sources.json` (ditolak: terlalu besar untuk langkah pertama dan belum punya policy rotasi secret/rollback yang lengkap).
+- **Dampak:** Tidak ada perubahan API/schema; Track B tetap discovery layer dengan guardrails, sementara dashboard menampilkan sample terbatas.
+- **Follow-up:** Susun runbook secret rotation/re-bootstrap dan policy promosi topic sebelum integrasi ke main checker.

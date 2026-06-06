@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "check:telegram": "tsx scripts/check-telegram.ts",
-    "validate:sources": "node scripts/validate-sources.mjs",
+    "validate:sources": "STRICT_TOPIC_ID=1 node scripts/validate-sources.mjs",
     "validate:contributions": "node scripts/validate-contributions.mjs",
     "check:source-links": "node scripts/check-source-links.mjs",
     "check:snapshot-relations": "node scripts/check-snapshot-relations.mjs",

@@ -103,7 +103,7 @@ export function AppShell({
       <footer className="border-t border-[var(--g300)] bg-[var(--ivory)]">
         <div className="mx-auto max-w-[1180px] px-8 py-8 flex flex-col sm:flex-row gap-4 justify-between text-[13px] text-[var(--g500)]">
           <p className="font-mono">
-            <span className="text-[var(--clay)]">●</span> kajian-source-list · v0.1 (vibathon-2026)
+            <span className="text-[var(--clay)]">●</span> kajian-source-list · v0.1
           </p>
           <div className="flex flex-wrap items-center gap-4">
             <a
