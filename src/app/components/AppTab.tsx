@@ -85,7 +85,7 @@ function getRegionLabel(regionKey: string): string {
 }
 
 function getBubbleRadius(total: number): number {
-  return Math.max(7, Math.min(24, 6 + Math.sqrt(total) * 4));
+  return Math.max(5, Math.min(15, 4 + Math.sqrt(total) * 2.5));
 }
 
 function getRegionHealthTone(summary: RegionHealthSummary): RegionHealthTone {
@@ -665,8 +665,8 @@ function LeafletRegionMap({
       if (cancelled || !containerRef.current || mapRef.current) return;
 
       const map = L.map(containerRef.current, {
-        center: [-2.5, 118],
-        zoom: 4,
+        center: [-5.5, 110.5],
+        zoom: 5,
         minZoom: 3,
         maxZoom: 10,
         zoomControl: true,
@@ -704,20 +704,21 @@ function LeafletRegionMap({
       if (cancelled || !mapReady || !mapRef.current || !markerLayerRef.current) return;
 
       markerLayerRef.current.clearLayers();
+      const mapSummaries = summaries.filter((summary) => summary.regionKey !== "nasional");
 
-      for (const summary of summaries) {
+      for (const summary of mapSummaries) {
         const point = REGION_GEO_POINTS[summary.regionKey] ?? REGION_GEO_POINTS.unknown;
         const tone = getRegionHealthTone(summary);
         const style = REGION_TONE_STYLES[tone];
         const selected = selectedRegion === summary.regionKey;
-        const size = Math.max(36, getBubbleRadius(summary.total) * 2.25);
+        const size = Math.max(24, getBubbleRadius(summary.total) * 2);
         const icon = createRegionDivIcon(L, summary, size, style, selected);
 
         const marker = L.marker([point.lat, point.lng], {
           icon,
           keyboard: true,
           title: `${summary.regionLabel}: ${summary.total} sources`,
-          zIndexOffset: selected ? 1000 : summary.regionKey === "nasional" ? 500 : 0,
+          zIndexOffset: selected ? 1000 : 0,
         })
           .bindTooltip(getRegionTooltipHtml(summary), {
             direction: "top",
@@ -734,10 +735,16 @@ function LeafletRegionMap({
         marker.addTo(markerLayerRef.current);
       }
 
-      const selectedSummary = summaries.find((summary) => summary.regionKey === selectedRegion);
+      const selectedSummary = mapSummaries.find((summary) => summary.regionKey === selectedRegion);
       if (selectedSummary) {
         const point = REGION_GEO_POINTS[selectedSummary.regionKey] ?? REGION_GEO_POINTS.unknown;
-        mapRef.current.flyTo([point.lat, point.lng], selectedSummary.regionKey === "nasional" ? 4 : 8, { duration: 0.45 });
+        mapRef.current.flyTo([point.lat, point.lng], 8, { duration: 0.45 });
+      } else if (mapSummaries.length > 0) {
+        const bounds = L.latLngBounds(mapSummaries.map((summary) => {
+          const point = REGION_GEO_POINTS[summary.regionKey] ?? REGION_GEO_POINTS.unknown;
+          return [point.lat, point.lng];
+        }));
+        mapRef.current.fitBounds(bounds, { padding: [28, 28], maxZoom: 6 });
       }
     }
 
