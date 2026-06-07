@@ -17,6 +17,21 @@ Dokumen ini adalah sumber utama kontribusi untuk project Vibathon.
 5. Push branch dan buka Pull Request
 6. Isi checklist + evidence pada PR template
 
+## Jalur Form (in-app)
+
+Cara termudah: buka tab **Contribute** di aplikasi dan isi form "Usulkan source lewat
+form". Form memvalidasi input secara langsung dan menyusun file intake JSON yang valid.
+Lalu pilih salah satu jalur pengiriman:
+
+- **Punya akun GitHub** → tombol "Buka di GitHub" membuka editor GitHub dengan file
+  `data/contributions/pending/<slug>.json` sudah terisi. Tinggal commit untuk membuka PR.
+- **Tidak punya akun GitHub** → kirim ke maintainer: "Kirim ke maintainer" (form
+  online), "Salin/Download JSON", atau "Email ke maintainer". Maintainer yang akan
+  membuat file pending dan commit.
+
+JSON yang dihasilkan **identik** di semua jalur, jadi hasil akhirnya sama: satu file
+kecil di `data/contributions/pending/` yang direview maintainer.
+
 ## Full Guide
 
 ### Tiga Jalur Data

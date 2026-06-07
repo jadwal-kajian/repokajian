@@ -4,10 +4,17 @@ import { join, resolve } from "node:path";
 import { tmpdir } from "node:os";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import {
+  buildGithubNewFileUrl,
+  buildIntakeJSON,
+  buildSlug,
+  validateIntake,
+} from "../src/shared/intake-rules.mjs";
 
 const ROOT = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const REVIEW_SCRIPT = join(ROOT, "scripts", "review-contributions.mjs");
 const PROMOTE_SCRIPT = join(ROOT, "scripts", "promote-contribution.mjs");
+const VALIDATE_SCRIPT = join(ROOT, "scripts", "validate-contributions.mjs");
 
 function baseSourcesFile() {
   return {
@@ -213,6 +220,108 @@ await test("promote: apply valid channel appends source and archives pending", a
   assert(existsSync(join(fixture.archiveDir, "kajiancontoh.json")), "expected archived pending file");
   const pendingEntries = await readdir(fixture.pendingDir);
   assert(pendingEntries.length === 0, "expected empty pending dir after archive");
+});
+
+// ===== E2: in-app form intake helpers =====
+
+await test("form: buildIntakeJSON channel output passes real validator", async (fixture) => {
+  const item = validChannelContribution();
+  await writeFile(join(fixture.pendingDir, `${buildSlug(item)}.json`), buildIntakeJSON(item), "utf-8");
+  const result = run(VALIDATE_SCRIPT, [], fixture);
+  expectStatus(result, 0, "validate form channel JSON");
+});
+
+await test("form: buildIntakeJSON topic output passes real validator", async (fixture) => {
+  const item = validTopicContribution();
+  await writeFile(join(fixture.pendingDir, `${buildSlug(item)}.json`), buildIntakeJSON(item), "utf-8");
+  const result = run(VALIDATE_SCRIPT, [], fixture);
+  expectStatus(result, 0, "validate form topic JSON");
+});
+
+// Unit tests for the shared rules (no fixture needed).
+function unit(name, fn) {
+  try {
+    fn();
+    console.log(`✅ ${name}`);
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+}
+
+const SAMPLE_SOURCES = baseSourcesFile().sources;
+
+unit("validateIntake: valid channel has no errors", () => {
+  const { errors } = validateIntake(validChannelContribution(), { sources: SAMPLE_SOURCES });
+  assert(errors.length === 0, `expected no errors, got ${JSON.stringify(errors)}`);
+});
+
+unit("validateIntake: each missing required field is an error", () => {
+  for (const field of ["name", "platform", "source_type", "url", "handle", "region", "evidence_url", "submitted_by"]) {
+    const item = validChannelContribution();
+    delete item[field];
+    const { errors } = validateIntake(item, { sources: SAMPLE_SOURCES });
+    assert(errors.some((e) => e.includes(field)), `expected error for missing '${field}'`);
+  }
+});
+
+unit("validateIntake: bad platform and source_type are errors", () => {
+  const item = { ...validChannelContribution(), platform: "xx", source_type: "weird" };
+  const { errors } = validateIntake(item, { sources: SAMPLE_SOURCES });
+  assert(errors.some((e) => e.includes("platform")), "expected platform error");
+  assert(errors.some((e) => e.includes("source_type")), "expected source_type error");
+});
+
+unit("validateIntake: non-http url and evidence_url are errors", () => {
+  const item = { ...validChannelContribution(), url: "ftp://x", evidence_url: "not-a-url" };
+  const { errors } = validateIntake(item, { sources: SAMPLE_SOURCES });
+  assert(errors.some((e) => e.startsWith("url")), "expected url error");
+  assert(errors.some((e) => e.startsWith("evidence_url")), "expected evidence_url error");
+});
+
+unit("validateIntake: category/tags must be arrays of strings", () => {
+  const item = { ...validChannelContribution(), category: "notarray", tags: ["", "ok"] };
+  const { errors } = validateIntake(item, { sources: SAMPLE_SOURCES });
+  assert(errors.some((e) => e.startsWith("category")), "expected category error");
+  assert(errors.some((e) => e.startsWith("tags")), "expected tags error");
+});
+
+unit("validateIntake: topic rules (parent missing, parent unknown, topic_id numeric)", () => {
+  const noParent = { ...validTopicContribution() };
+  delete noParent.parent_id;
+  assert(validateIntake(noParent, { sources: SAMPLE_SOURCES }).errors.some((e) => e.includes("parent_id")), "expected parent_id required");
+
+  const badParent = { ...validTopicContribution(), parent_id: "tg-missing" };
+  assert(validateIntake(badParent, { sources: SAMPLE_SOURCES }).errors.some((e) => e.includes("does not exist")), "expected parent not found");
+
+  const badTopicId = { ...validTopicContribution(), topic_id: "20a" };
+  assert(validateIntake(badTopicId, { sources: SAMPLE_SOURCES }).errors.some((e) => e.includes("topic_id")), "expected numeric topic_id error");
+});
+
+unit("validateIntake: duplicate url/handle are warnings not errors", () => {
+  const dupUrl = { ...validChannelContribution(), url: "https://t.me/sijadwalkajian" };
+  const r1 = validateIntake(dupUrl, { sources: SAMPLE_SOURCES });
+  assert(r1.errors.length === 0, "duplicate url should not be an error");
+  assert(r1.warnings.some((w) => w.includes("duplicates existing source")), "expected url warning");
+
+  const dupHandle = { ...validChannelContribution(), url: "https://t.me/other", handle: "sijadwalkajian" };
+  const r2 = validateIntake(dupHandle, { sources: SAMPLE_SOURCES });
+  assert(r2.warnings.some((w) => w.startsWith("handle")), "expected handle warning");
+});
+
+unit("buildSlug: non-topic uses canonical handle; topic uses parent-topic-id", () => {
+  assert(buildSlug(validChannelContribution()) === "kajiancontoh", "channel slug");
+  assert(buildSlug({ ...validChannelContribution(), handle: "@Kajian Contoh!" }) === "kajian-contoh", "canonicalized slug");
+  assert(buildSlug(validTopicContribution()) === "sijadwalkajian-topic-201", "topic slug");
+});
+
+unit("buildGithubNewFileUrl: encodes filename + JSON round-trip", () => {
+  const item = validChannelContribution();
+  const json = buildIntakeJSON(item);
+  const url = buildGithubNewFileUrl(buildSlug(item), json);
+  const parsed = new URL(url);
+  assert(parsed.searchParams.get("filename") === "data/contributions/pending/kajiancontoh.json", "filename param");
+  assert(parsed.searchParams.get("value") === json, "value round-trips to original JSON");
 });
 
 console.log("\n✅ contribution script smoke tests passed");

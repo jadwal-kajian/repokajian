@@ -96,7 +96,7 @@ export function AppShell({
           <AppTab sources={sources} latest={latest} topicDiscovery={topicDiscovery} healthHistory={healthHistory} />
         </div>
         <div role="tabpanel" id="panel-contribution" aria-labelledby="tab-contribution" hidden={tab !== "contribution"}>
-          <OpenContributionTab />
+          <OpenContributionTab sources={sources} />
         </div>
       </main>
 

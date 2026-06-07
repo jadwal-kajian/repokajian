@@ -36,6 +36,17 @@ Untuk topic Telegram, tambahkan:
 }
 ```
 
+## Intake dari Form In-App
+
+Kontributor non-GitHub bisa mengirim usulan lewat form di tab **Contribute** (jalur
+Netlify Forms / Salin JSON / Email). Untuk submission seperti itu:
+
+1. Ambil JSON dari submission (dashboard Netlify, email, atau pesan).
+2. Buat file `pending/<slug>.json` berisi JSON tersebut.
+3. Lanjut ke maintainer workflow di bawah (validate → promote).
+
+JSON dari form sudah memenuhi format minimal, jadi tidak perlu copy-edit manual.
+
 ## Maintainer Workflow
 
 Review semua pending file:

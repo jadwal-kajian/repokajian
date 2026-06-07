@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import type { Source } from "../lib/data";
+import { ContributionForm } from "./ContributionForm";
 
 // ===== Step definitions ===========================================
 
@@ -337,9 +339,11 @@ function ContributionWalkthrough() {
 
 // ===== Main tab ==================================================
 
-export function OpenContributionTab() {
+export function OpenContributionTab({ sources }: { sources: Source[] }) {
   return (
-    <section className="mx-auto max-w-[1180px] px-8 py-10">
+    <section className="mx-auto max-w-[1180px] px-8 py-10 space-y-8">
+      <ContributionForm sources={sources} />
+
       <div className="rounded-2xl border border-[var(--g300)] bg-white p-6 md:p-8 shadow-sm">
         <p className="eyebrow mb-3">Phase 3 · Done</p>
         <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-[var(--slate)] mb-3">
@@ -363,8 +367,14 @@ export function OpenContributionTab() {
           ))}
         </div>
 
-        {/* Animated walkthrough */}
-        <ContributionWalkthrough />
+        {/* Animated walkthrough — collapsed by default (form above is the primary action) */}
+        <details className="mt-8 group">
+          <summary className="cursor-pointer list-none text-[13.5px] font-medium text-[var(--clay)] hover:opacity-70">
+            <span className="group-open:hidden">▸ Lihat cara kerja jalur PR (walkthrough)</span>
+            <span className="hidden group-open:inline">▾ Sembunyikan walkthrough</span>
+          </summary>
+          <ContributionWalkthrough />
+        </details>
 
         {/* Step list (static reference) */}
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-start">
