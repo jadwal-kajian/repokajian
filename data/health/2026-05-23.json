@@ -1,0 +1,271 @@
+{
+  "generated_at": "2026-05-23T18:03:25.155Z",
+  "total_sources": 32,
+  "monitored": 0,
+  "by_status": {
+    "active": 0,
+    "stale": 0,
+    "dead": 0,
+    "blocked": 0,
+    "error": 0,
+    "unmonitored": 32
+  },
+  "snapshots": [
+    {
+      "source_id": "tg-mthilyatunnisa",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-kajianustadzafifi",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-gresikmengaji",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-khalidbasalamahofficial",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-fawaid-kangaswad",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-muflihsafitraofficial",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-ngangsukawruh",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-jadwalkajiankaskus",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-infokajiansunnahsby",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-jadwalkajiansunnah",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-rodjatv",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-yufidtv",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-muslimorid",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-bbgalilmu",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-kajianislampedia",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-jadwalkajianid",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-jadwalkajian-id",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-syafiqrizabasalamah",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-hsi-abdullahroy",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-portalkajian",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "web",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-jadwalkajian-com",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "web",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-forumkajian",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "web",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-cintasedekah",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "web",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-hsi",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "web",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsi-abdullahroy",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "ig",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsiberbagi",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "ig",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-bmthsi",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "ig",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-majalahhsi",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "ig",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsikibar",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "ig",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-sijadwalkajian",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-sijadwalkajian-jakarta",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "tg-sijadwalkajian-surabaya",
+      "checked_at": "2026-05-23T18:03:25.153Z",
+      "platform": "tg",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    }
+  ]
+}

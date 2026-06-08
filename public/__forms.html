@@ -1,0 +1,23 @@
+<!--
+  Netlify Forms detection stub.
+
+  Next.js (App Router) renders forms client-side, so Netlify's build-time crawler
+  cannot detect them from the React markup. This static file gives Netlify a form to
+  register at build time. The in-app form (DeliveryButtons.tsx) POSTs to "/" with
+  matching field names (form-name, name, submitted_by, payload, bot-field).
+-->
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <title>source-intake form</title>
+  </head>
+  <body>
+    <form name="source-intake" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="bot-field" />
+      <input type="text" name="name" />
+      <input type="text" name="submitted_by" />
+      <textarea name="payload"></textarea>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+name: Validate Source Registry
+
+on:
+  pull_request:
+    paths:
+      - "data/sources.json"
+      - "data/contributions/**"
+      - "scripts/validate-sources.mjs"
+      - "scripts/validate-contributions.mjs"
+      - ".github/workflows/validate-sources.yml"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run source validator
+        run: STRICT_TOPIC_ID=1 node scripts/validate-sources.mjs
+
+      - name: Run contribution intake validator
+        run: node scripts/validate-contributions.mjs
+
+      - name: Validate latest.json version format
+        run: node scripts/check-versioning.mjs
+
+      - name: Validate snapshot/source relations
+        run: node scripts/check-snapshot-relations.mjs
+
+      - name: Run source link check (warning-only)
+        run: node scripts/check-source-links.mjs

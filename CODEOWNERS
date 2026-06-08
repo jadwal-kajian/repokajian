@@ -1,0 +1,9 @@
+# Default reviewers
+* @jadwal-kajian
+
+# Source registry and contribution process
+/data/sources.json @jadwal-kajian
+/docs/CONTRIBUTING.md @jadwal-kajian
+/.github/PULL_REQUEST_TEMPLATE.md @jadwal-kajian
+/.github/ISSUE_TEMPLATE/* @jadwal-kajian
+/.github/workflows/validate-sources.yml @jadwal-kajian

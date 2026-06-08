@@ -1,0 +1,339 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+:root {
+  /* Core palette */
+  --ivory:  #FAF9F5;
+  --paper:  #FFFFFF;
+  --slate:  #141413;
+  --clay:   #D97757;
+  --clay-d: #B85C3E;
+  --oat:    #E3DACC;
+  --olive:  #788C5D;
+
+  /* Semantic (new) */
+  --jade:   #4D7C5F;
+  --amber:  #C4831A;
+  --rust:   #B84040;
+
+  /* Neutral scale */
+  --g100:   #F0EEE6;
+  --g200:   #E6E3DA;
+  --g300:   #D1CFC5;
+  --g400:   #A8A69E;
+  --g500:   #87867F;
+  --g600:   #5D5C57;
+  --g700:   #3D3D3A;
+
+  /* Font stacks */
+  --font-display-stack: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-sans-stack:    var(--font-plus-jakarta), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif-stack:   var(--font-source-serif), ui-serif, Georgia, serif;
+  --font-mono-stack:    var(--font-geist-mono), ui-monospace, "SF Mono", Menlo, Monaco, Consolas, monospace;
+
+  /* Motion */
+  --duration-micro:  100ms;
+  --duration-short:  150ms;
+  --duration-medium: 250ms;
+  --duration-long:   400ms;
+  --ease-enter:  cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit:   cubic-bezier(0.4, 0, 1, 1);
+  --ease-move:   cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode */
+[data-theme="dark"] {
+  --ivory:  #1A1916;
+  --paper:  #211F1B;
+  --slate:  #F0EDE4;
+  --oat:    #2E2B25;
+  --g100:   #242219;
+  --g200:   #2E2B25;
+  --g300:   #3D3A32;
+  --g400:   #5C5A54;
+  --g500:   #8C8B83;
+  --g600:   #A8A59B;
+  --g700:   #C8C5BA;
+}
+
+@theme inline {
+  --color-ivory:     var(--ivory);
+  --color-paper:     var(--paper);
+  --color-slate-ink: var(--slate);
+  --color-clay:      var(--clay);
+  --color-clay-d:    var(--clay-d);
+  --color-oat:       var(--oat);
+  --color-olive:     var(--olive);
+  --color-jade:      var(--jade);
+  --color-amber:     var(--amber);
+  --color-rust:      var(--rust);
+  --color-g100:      var(--g100);
+  --color-g200:      var(--g200);
+  --color-g300:      var(--g300);
+  --color-g400:      var(--g400);
+  --color-g500:      var(--g500);
+  --color-g600:      var(--g600);
+  --color-g700:      var(--g700);
+
+  --font-display: var(--font-display-stack);
+  --font-serif:   var(--font-serif-stack);
+  --font-sans:    var(--font-sans-stack);
+  --font-mono:    var(--font-mono-stack);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--slate);
+  font-family: var(--font-sans-stack);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  transition: background var(--duration-medium) var(--ease-move),
+              color var(--duration-medium) var(--ease-move);
+}
+
+/* === Markdown rendering (.prose-doc) ====================================== */
+.prose-doc {
+  font-family: var(--font-serif-stack);
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--g700);
+}
+.prose-doc h1, .prose-doc h2, .prose-doc h3, .prose-doc h4 {
+  font-family: var(--font-display-stack);
+  color: var(--slate);
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 2.2em 0 0.6em;
+  scroll-margin-top: 96px;
+}
+.prose-doc h1 {
+  font-size: clamp(32px, 4vw, 46px);
+  line-height: 1.1;
+  margin-top: 0.4em;
+  border-bottom: 1.5px solid var(--g300);
+  padding-bottom: 0.4em;
+}
+.prose-doc h2 { font-size: 26px; }
+.prose-doc h3 { font-size: 20px; color: var(--g700); }
+.prose-doc h4 { font-size: 13px; font-family: var(--font-mono-stack); text-transform: uppercase; letter-spacing: 0.1em; color: var(--g500); font-weight: 500; }
+.prose-doc p { margin: 0.9em 0; }
+.prose-doc a { color: var(--clay); text-decoration: underline; text-decoration-color: var(--oat); text-underline-offset: 3px; }
+.prose-doc a:hover { text-decoration-color: var(--clay); }
+.prose-doc strong { color: var(--slate); font-weight: 600; }
+.prose-doc em { font-style: italic; }
+.prose-doc ul, .prose-doc ol { margin: 0.9em 0; padding-left: 1.6em; }
+.prose-doc li { margin: 0.35em 0; }
+.prose-doc li input[type="checkbox"] { margin-right: 0.4em; }
+.prose-doc blockquote {
+  border-left: 3px solid var(--clay);
+  padding: 0.4em 0 0.4em 1em;
+  margin: 1.2em 0;
+  background: var(--g100);
+  color: var(--g700);
+  font-style: italic;
+}
+.prose-doc code {
+  font-family: var(--font-mono-stack);
+  font-size: 0.88em;
+  background: var(--g100);
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  color: var(--slate);
+}
+.prose-doc pre {
+  background: var(--slate);
+  color: var(--ivory);
+  padding: 1em 1.2em;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin: 1.2em 0;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+.prose-doc pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: inherit;
+}
+.prose-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.2em 0;
+  font-size: 14.5px;
+}
+.prose-doc th, .prose-doc td {
+  text-align: left;
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--g200);
+  vertical-align: top;
+}
+.prose-doc th {
+  background: var(--g100);
+  font-weight: 500;
+  color: var(--slate);
+  font-family: var(--font-mono-stack);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.prose-doc hr { border: 0; border-top: 1.5px solid var(--g300); margin: 2.4em 0; }
+.prose-doc img { max-width: 100%; border-radius: 8px; }
+
+/* ===== Animations ============================================= */
+@keyframes skeleton-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+/* Status: active — slow jade pulse */
+@keyframes pulse-active {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.35; }
+}
+/* Status: checking — clay pulse with subtle scale */
+@keyframes pulse-checking {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.55; transform: scale(0.82); }
+}
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse-ring {
+  0%   { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+@keyframes count-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Reduced motion ======================================== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ===== Skeleton shimmer box ================================== */
+.skeleton-box {
+  background: linear-gradient(90deg, var(--g100) 0%, var(--g200) 50%, var(--g100) 100%);
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+/* ===== Staggered card entrance =============================== */
+.card-enter {
+  animation: fade-up 0.4s cubic-bezier(0.16,1,0.3,1) both;
+}
+
+/* eyebrow helper used in masthead */
+.eyebrow {
+  font-family: var(--font-mono-stack);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--g500);
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::before {
+  content: "";
+  width: 24px; height: 1.5px;
+  background: var(--clay);
+}
+
+/* === Leaflet region health map ============================================ */
+.region-leaflet-icon {
+  background: transparent;
+  border: 0;
+}
+.region-leaflet-marker {
+  width: var(--marker-size);
+  height: var(--marker-size);
+  border-radius: 999px;
+  border: 2px solid var(--marker-stroke);
+  background: var(--marker-fill);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono-stack);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgb(20 20 19 / 0.18);
+  transition: transform 150ms ease, box-shadow 150ms ease, border-color 150ms ease;
+}
+.region-leaflet-marker:hover,
+.region-leaflet-marker.is-selected {
+  transform: scale(1.12);
+  box-shadow: 0 0 0 5px rgb(20 20 19 / 0.14), 0 12px 24px rgb(20 20 19 / 0.2);
+}
+.region-leaflet-aggregate {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--g600, var(--g500));
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgb(20 20 19 / 0.12);
+}
+.region-leaflet-tooltip {
+  border: 1px solid var(--g300);
+  border-radius: 10px;
+  background: var(--paper);
+  color: var(--g700);
+  box-shadow: 0 10px 28px rgb(20 20 19 / 0.16);
+  font-family: var(--font-mono-stack);
+  font-size: 11px;
+  line-height: 1.45;
+  padding: 8px 10px;
+}
+.region-leaflet-tooltip strong,
+.region-leaflet-tooltip span {
+  display: block;
+}
+.region-leaflet-tooltip strong {
+  color: var(--slate);
+  font-family: var(--font-sans-stack);
+  font-size: 12px;
+  margin-bottom: 2px;
+}
+
+/* Keep Leaflet layers below the sticky app navigation (nav z-index: 30). */
+.region-leaflet-shell .leaflet-container {
+  z-index: 0;
+  background: var(--g100);
+}
+.region-leaflet-shell .leaflet-tile {
+  filter: saturate(0.25) contrast(0.92) brightness(1.04);
+}
+.region-leaflet-shell .leaflet-pane { z-index: 1; }
+.region-leaflet-shell .leaflet-tile-pane { z-index: 1; }
+.region-leaflet-shell .leaflet-overlay-pane { z-index: 2; }
+.region-leaflet-shell .leaflet-shadow-pane { z-index: 3; }
+.region-leaflet-shell .leaflet-marker-pane { z-index: 4; }
+.region-leaflet-shell .leaflet-tooltip-pane { z-index: 5; }
+.region-leaflet-shell .leaflet-popup-pane { z-index: 6; }
+.region-leaflet-shell .leaflet-top,
+.region-leaflet-shell .leaflet-bottom {
+  z-index: 10;
+}

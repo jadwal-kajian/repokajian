@@ -1,0 +1,323 @@
+{
+  "generated_at": "2026-05-20T19:32:00.731Z",
+  "total_sources": 29,
+  "monitored": 19,
+  "by_status": {
+    "active": 11,
+    "stale": 0,
+    "dead": 7,
+    "blocked": 0,
+    "error": 1,
+    "unmonitored": 10
+  },
+  "snapshots": [
+    {
+      "source_id": "tg-mthilyatunnisa",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 6090,
+        "last_post_at": "2026-05-20T10:03:26.000Z",
+        "last_post_age_hours": 9.4
+      }
+    },
+    {
+      "source_id": "tg-KajianustadzAfifi",
+      "checked_at": "2026-05-20T19:30:27.677Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 2150,
+        "last_post_at": "2026-05-20T13:49:07.000Z",
+        "last_post_age_hours": 5.7
+      }
+    },
+    {
+      "source_id": "tg-gresikmengaji",
+      "checked_at": "2026-05-20T19:30:33.103Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 553,
+        "last_post_at": "2026-05-20T13:52:05.000Z",
+        "last_post_age_hours": 5.6
+      }
+    },
+    {
+      "source_id": "tg-khalidbasalamahofficial",
+      "checked_at": "2026-05-20T19:30:38.526Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 74700,
+        "last_post_at": "2026-05-20T11:21:03.000Z",
+        "last_post_age_hours": 8.2
+      }
+    },
+    {
+      "source_id": "tg-fawaid_kangaswad",
+      "checked_at": "2026-05-20T19:30:44.072Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 13400,
+        "last_post_at": "2026-05-20T05:34:51.000Z",
+        "last_post_age_hours": 13.9
+      }
+    },
+    {
+      "source_id": "tg-muflihsafitraofficial",
+      "checked_at": "2026-05-20T19:30:49.481Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 8240,
+        "last_post_at": "2026-05-20T09:05:42.000Z",
+        "last_post_age_hours": 10.4
+      }
+    },
+    {
+      "source_id": "tg-NgangsuKawruh",
+      "checked_at": "2026-05-20T19:30:54.963Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 3800,
+        "last_post_at": "2026-03-07T18:31:19.000Z",
+        "last_post_age_hours": 1777
+      }
+    },
+    {
+      "source_id": "tg-jadwalkajiankaskus",
+      "checked_at": "2026-05-20T19:31:00.349Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 93,
+        "last_post_at": "2026-05-19T22:20:04.000Z",
+        "last_post_age_hours": 21.2
+      }
+    },
+    {
+      "source_id": "tg-infokajiansunnahsby",
+      "checked_at": "2026-05-20T19:31:05.791Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 832,
+        "last_post_at": "2026-05-20T01:04:30.000Z",
+        "last_post_age_hours": 18.4
+      }
+    },
+    {
+      "source_id": "tg-jadwalkajiansunnah",
+      "checked_at": "2026-05-20T19:31:11.170Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 2180,
+        "last_post_at": "2026-02-09T09:39:36.000Z",
+        "last_post_age_hours": 2409.9
+      }
+    },
+    {
+      "source_id": "tg-rodjatv",
+      "checked_at": "2026-05-20T19:31:16.667Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 10700,
+        "last_post_at": "2026-05-20T03:56:57.000Z",
+        "last_post_age_hours": 15.6
+      }
+    },
+    {
+      "source_id": "tg-yufidtv",
+      "checked_at": "2026-05-20T19:31:22.061Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 27400,
+        "last_post_at": "2026-05-19T10:20:37.000Z",
+        "last_post_age_hours": 33.2
+      }
+    },
+    {
+      "source_id": "tg-muslimorid",
+      "checked_at": "2026-05-20T19:31:27.576Z",
+      "platform": "telegram",
+      "status": "active",
+      "reliability_score": 100,
+      "metrics": {
+        "subscribers": 34300,
+        "last_post_at": "2026-05-20T13:10:49.000Z",
+        "last_post_age_hours": 6.3
+      }
+    },
+    {
+      "source_id": "tg-bbgalilmu",
+      "checked_at": "2026-05-20T19:31:32.957Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 3230,
+        "last_post_at": "2025-07-09T12:06:03.000Z",
+        "last_post_age_hours": 7567.4
+      }
+    },
+    {
+      "source_id": "tg-kajianislampedia",
+      "checked_at": "2026-05-20T19:31:38.573Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": null,
+        "last_post_at": "2024-01-23T03:31:01.000Z",
+        "last_post_age_hours": 20368
+      }
+    },
+    {
+      "source_id": "tg-jadwalkajianID",
+      "checked_at": "2026-05-20T19:31:43.920Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 4300,
+        "last_post_at": "2023-10-30T05:39:00.000Z",
+        "last_post_age_hours": 22405.9
+      }
+    },
+    {
+      "source_id": "tg-JadwalKajian_id",
+      "checked_at": "2026-05-20T19:31:49.320Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 578,
+        "last_post_at": "2021-06-16T22:22:10.000Z",
+        "last_post_age_hours": 43173.2
+      }
+    },
+    {
+      "source_id": "tg-syafiqrizabasalamah",
+      "checked_at": "2026-05-20T19:31:54.895Z",
+      "platform": "telegram",
+      "status": "dead",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": 83,
+        "last_post_at": "2017-05-31T02:03:16.000Z",
+        "last_post_age_hours": 78641.5
+      }
+    },
+    {
+      "source_id": "tg-hsi_abdullahroy",
+      "checked_at": "2026-05-20T19:32:00.190Z",
+      "platform": "telegram",
+      "status": "error",
+      "reliability_score": 0,
+      "metrics": {
+        "subscribers": null,
+        "last_post_at": null,
+        "last_post_age_hours": null
+      }
+    },
+    {
+      "source_id": "web-portalkajian",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "website",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-jadwalkajian-com",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "website",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-forumkajian",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "website",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-cintasedekah",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "website",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "web-hsi",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "website",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsi-abdullahroy",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "instagram",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsiberbagi",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "instagram",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-bmthsi",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "instagram",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-majalahhsi",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "instagram",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    },
+    {
+      "source_id": "ig-hsikibar",
+      "checked_at": "2026-05-20T19:30:22.164Z",
+      "platform": "instagram",
+      "status": "unmonitored",
+      "reliability_score": 0,
+      "metrics": {}
+    }
+  ]
+}
