@@ -3,7 +3,7 @@ name: Telegram Health Check
 on:
   workflow_dispatch:        # tombol "Run workflow" di GitHub UI + via REST API
   schedule:
-    - cron: "1 17 * * *"    # daily 17:01 UTC = 00:01 WIB
+    - cron: "1 17 */2 * *"    # every 2 days at 17:01 UTC = 00:01 WIB
 
 permissions:
   contents: write           # commit hasil snapshot ke repo
