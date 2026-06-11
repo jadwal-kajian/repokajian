@@ -2,7 +2,7 @@ import { readFile } from "node:fs/promises";
 import { URL } from "node:url";
 
 const ALLOWED_PLATFORMS = new Set(["tg", "yt", "ig", "web", "wa"]);
-const REQUIRED_FIELDS = ["id", "name", "platform", "source_type", "url", "handle", "region", "priority", "added_at"];
+const REQUIRED_FIELDS = ["id", "name", "platform", "source_type", "url", "handle", "region", "language", "priority", "added_at"];
 
 function fail(msg) {
   console.error(`❌ ${msg}`);
@@ -45,6 +45,7 @@ async function main() {
 
   const seenIds = new Set();
   const seenHandlePlatform = new Set();
+  const seenParentTopicId = new Map();
 
   data.sources.forEach((s, idx) => {
     const where = `sources[${idx}]`;
@@ -91,6 +92,10 @@ async function main() {
       fail(`${where}.region must be non-empty string`);
     }
 
+    if (typeof s.language !== "string" || s.language.trim() === "") {
+      fail(`${where}.language must be non-empty string`);
+    }
+
     if (typeof s.priority !== "number" || !Number.isFinite(s.priority)) {
       fail(`${where}.priority must be a number`);
     }
@@ -112,6 +117,16 @@ async function main() {
           fail(`${where}.topic_id '${s.topic_id}' must be numeric when STRICT_TOPIC_ID=1`);
         } else if (!strictTopicId && !isNumeric) {
           warn(`${where}.topic_id '${s.topic_id}' is non-numeric placeholder (allowed until strict mode enabled)`);
+        }
+      }
+
+      if (typeof s.parent_id === "string" && s.parent_id.trim() !== "" && typeof s.topic_id === "string" && s.topic_id.trim() !== "") {
+        const topicKey = `${s.parent_id}::${s.topic_id}`;
+        const firstSeen = seenParentTopicId.get(topicKey);
+        if (firstSeen !== undefined) {
+          fail(`${where}.parent_id/topic_id duplicates sources[${firstSeen}] (${s.parent_id}/${s.topic_id})`);
+        } else {
+          seenParentTopicId.set(topicKey, idx);
         }
       }
     }

@@ -4,6 +4,7 @@ import type { TelegramMetrics } from "./types.js";
 const TG_PREVIEW_BASE = "https://t.me/s/";
 const USER_AGENT = "Mozilla/5.0 (compatible; KajianSourceListBot/0.1; +https://github.com/)";
 const FETCH_TIMEOUT_MS = 15_000;
+const RETRY_BACKOFF_BASE_MS = 2_000;
 
 export async function fetchTelegramChannel(
   handle: string,
@@ -12,6 +13,8 @@ export async function fetchTelegramChannel(
   const url = `${TG_PREVIEW_BASE}${encodeURIComponent(handle)}`;
   let lastErr: unknown;
 
+  // Worst-case runtime is attempts × FETCH_TIMEOUT_MS plus exponential backoff
+  // between failed attempts. With the default 3 attempts this is about 51s.
   for (let i = 0; i < attempts; i++) {
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), FETCH_TIMEOUT_MS);
@@ -26,7 +29,7 @@ export async function fetchTelegramChannel(
     } catch (err) {
       lastErr = err;
       if (i < attempts - 1) {
-        const backoffMs = 2_000 * Math.pow(2, i);
+        const backoffMs = RETRY_BACKOFF_BASE_MS * Math.pow(2, i);
         await new Promise((r) => setTimeout(r, backoffMs));
       }
     } finally {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 
 const REPO_OWNER = process.env.NEXT_PUBLIC_REPO_OWNER ?? "t-onluring";
 const REPO_NAME = process.env.NEXT_PUBLIC_REPO_NAME ?? "vibathon-2026";
@@ -11,14 +11,44 @@ const YAML_EDIT_URL = `https://github.com/${REPO}/edit/main/.github/workflows/${
 const DISPATCH_URL = `https://api.github.com/repos/${REPO}/actions/workflows/${WORKFLOW_FILE}/dispatches`;
 const PAT_STORAGE_KEY = "kajian.gh_pat";
 const SCHED_STORAGE_KEY = "kajian.cron_schedule_wib";
+const DEFAULT_SCHEDULE_WIB = "0:1";
+const SCHEDULE_CHANGE_EVENT = "kajian:cron-schedule-change";
 
 type Mode = "manual" | "automatic";
 type DispatchStatus = "idle" | "loading" | "ok" | "err";
 
+function subscribeSchedule(listener: () => void) {
+  window.addEventListener("storage", listener);
+  window.addEventListener(SCHEDULE_CHANGE_EVENT, listener);
+  return () => {
+    window.removeEventListener("storage", listener);
+    window.removeEventListener(SCHEDULE_CHANGE_EVENT, listener);
+  };
+}
+
+function getScheduleSnapshot() {
+  try {
+    return localStorage.getItem(SCHED_STORAGE_KEY) ?? DEFAULT_SCHEDULE_WIB;
+  } catch {
+    return DEFAULT_SCHEDULE_WIB;
+  }
+}
+
+function getServerScheduleSnapshot() {
+  return DEFAULT_SCHEDULE_WIB;
+}
+
+function parseSchedule(value: string): { hour: number; minute: number } {
+  const [rawHour, rawMinute] = value.split(":").map(Number);
+  return {
+    hour: Number.isFinite(rawHour) ? Math.min(23, Math.max(0, rawHour)) : 0,
+    minute: Number.isFinite(rawMinute) ? Math.min(59, Math.max(0, rawMinute)) : 1,
+  };
+}
+
 export function CronPanel({ lastRunAt }: { lastRunAt: string | null }) {
   const [mode, setMode] = useState<Mode>("manual");
 
-  // Hydrate PAT from localStorage with lazy initializer (SSR-safe, no useEffect)
   const [pat, setPat] = useState(() => {
     if (typeof window === "undefined") return "";
     try {
@@ -33,36 +63,9 @@ export function CronPanel({ lastRunAt }: { lastRunAt: string | null }) {
   const [dispatchStatus, setDispatchStatus] = useState<DispatchStatus>("idle");
   const [dispatchMsg, setDispatchMsg] = useState<string>("");
 
-  // Schedule editor (WIB) — hydrate from localStorage with lazy initializer
-  const [hourWib, setHourWib] = useState(() => {
-    if (typeof window === "undefined") return 0;
-    try {
-      const sched = localStorage.getItem(SCHED_STORAGE_KEY);
-      if (sched) {
-        const [h] = sched.split(":").map(Number);
-        if (Number.isFinite(h)) return h;
-      }
-    } catch {
-      /* ignore */
-    }
-    return 0;
-  });
-
-  const [minuteWib, setMinuteWib] = useState(() => {
-    if (typeof window === "undefined") return 1;
-    try {
-      const sched = localStorage.getItem(SCHED_STORAGE_KEY);
-      if (sched) {
-        const [, m] = sched.split(":").map(Number);
-        if (Number.isFinite(m)) return m;
-      }
-    } catch {
-      /* ignore */
-    }
-    return 1;
-  });
-
   const [copied, setCopied] = useState(false);
+  const scheduleSnapshot = useSyncExternalStore(subscribeSchedule, getScheduleSnapshot, getServerScheduleSnapshot);
+  const { hour: hourWib, minute: minuteWib } = parseSchedule(scheduleSnapshot);
 
   const cronUtc = wibToCronUtc(hourWib, minuteWib);
 
@@ -106,6 +109,7 @@ export function CronPanel({ lastRunAt }: { lastRunAt: string | null }) {
   function persistSchedule(h: number, m: number) {
     try {
       localStorage.setItem(SCHED_STORAGE_KEY, `${h}:${m}`);
+      window.dispatchEvent(new Event(SCHEDULE_CHANGE_EVENT));
     } catch {}
   }
 
@@ -234,7 +238,6 @@ export function CronPanel({ lastRunAt }: { lastRunAt: string | null }) {
               value={hourWib}
               max={23}
               onChange={(v) => {
-                setHourWib(v);
                 persistSchedule(v, minuteWib);
               }}
             />
@@ -243,7 +246,6 @@ export function CronPanel({ lastRunAt }: { lastRunAt: string | null }) {
               value={minuteWib}
               max={59}
               onChange={(v) => {
-                setMinuteWib(v);
                 persistSchedule(hourWib, v);
               }}
             />

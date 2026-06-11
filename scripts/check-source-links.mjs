@@ -10,27 +10,34 @@ function withTimeout(ms) {
 }
 
 async function probe(url) {
-  const { controller, clear } = withTimeout(TIMEOUT_MS);
+  const head = withTimeout(TIMEOUT_MS);
   try {
     const res = await fetch(url, {
       method: "HEAD",
       redirect: "follow",
-      signal: controller.signal,
+      signal: head.controller.signal,
       headers: { "user-agent": "vibathon-link-check/1.0" },
     });
-    clear();
     if (res.status < 400) return { ok: true, status: res.status, method: "HEAD" };
+  } catch (err) {
+    return { ok: false, status: 0, error: err instanceof Error ? err.message : String(err) };
+  } finally {
+    head.clear();
+  }
 
+  const get = withTimeout(TIMEOUT_MS);
+  try {
     const retry = await fetch(url, {
       method: "GET",
       redirect: "follow",
-      signal: controller.signal,
+      signal: get.controller.signal,
       headers: { "user-agent": "vibathon-link-check/1.0" },
     });
     return { ok: retry.status < 400, status: retry.status, method: "GET" };
   } catch (err) {
-    clear();
     return { ok: false, status: 0, error: err instanceof Error ? err.message : String(err) };
+  } finally {
+    get.clear();
   }
 }
 

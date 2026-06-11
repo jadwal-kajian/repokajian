@@ -28,6 +28,13 @@ function todayDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
+async function writeJsonAtomic(path, value) {
+  const dir = dirname(path);
+  const tmpPath = join(dir, `.${basename(path)}.${process.pid}.tmp`);
+  await writeFile(tmpPath, `${JSON.stringify(value, null, 2)}\n`, "utf-8");
+  await rename(tmpPath, path);
+}
+
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim() !== "";
 }
@@ -256,8 +263,8 @@ async function main() {
 
   await mkdir(dirname(SOURCES_PATH), { recursive: true });
   await mkdir(ARCHIVE_DIR, { recursive: true });
-  await writeFile(SOURCES_PATH, `${JSON.stringify(nextSourcesFile, null, 2)}\n`, "utf-8");
   await rename(inputFile, archivePath);
+  await writeJsonAtomic(SOURCES_PATH, nextSourcesFile);
 
   runValidateSources();
 

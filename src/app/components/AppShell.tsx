@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useSyncExternalStore } from "react";
 import { OverviewTab } from "./OverviewTab";
 import { RoadmapSection } from "./RoadmapSection";
 import { AppTab } from "./AppTab";
@@ -11,6 +11,19 @@ import { FeedbackFAB } from "./FeedbackFAB";
 import type { DocFile, HealthHistoryPoint, LatestSummary, Source, TopicDiscovery } from "../lib/data";
 
 type TabKey = "overview" | "roadmap" | "architecture" | "app" | "contribution";
+
+function subscribeTheme(listener: () => void) {
+  window.addEventListener("kajian:themechange", listener);
+  return () => window.removeEventListener("kajian:themechange", listener);
+}
+
+function getThemeSnapshot() {
+  return document.documentElement.dataset.theme === "dark";
+}
+
+function getServerThemeSnapshot() {
+  return false;
+}
 
 export function AppShell({
   docs,
@@ -27,16 +40,13 @@ export function AppShell({
 }) {
   const [tab, setTab] = useState<TabKey>("overview");
   const [docsOpen, setDocsOpen] = useState(false);
-  const [dark, setDark] = useState(() => {
-    if (typeof document === "undefined") return false;
-    return document.documentElement.dataset.theme === "dark";
-  });
+  const dark = useSyncExternalStore(subscribeTheme, getThemeSnapshot, getServerThemeSnapshot);
 
   const toggleTheme = () => {
     const next = !dark;
-    setDark(next);
     document.documentElement.dataset.theme = next ? "dark" : "";
     try { localStorage.setItem("theme", next ? "dark" : "light"); } catch {}
+    window.dispatchEvent(new Event("kajian:themechange"));
   };
 
   return (

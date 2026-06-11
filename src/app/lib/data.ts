@@ -9,6 +9,15 @@ const SOURCES_PATH = join(ROOT, "data", "sources.json");
 const LATEST_PATH = join(ROOT, "data", "latest.json");
 const TOPIC_DISCOVERY_PATH = join(ROOT, "data", "spikes", "telegram-topic-freshness-evaluated.json");
 
+function isMissingFileError(error: unknown): boolean {
+  return Boolean(error && typeof error === "object" && "code" in error && error.code === "ENOENT");
+}
+
+async function readJsonFile<T>(path: string): Promise<T> {
+  const raw = await readFile(path, "utf-8");
+  return JSON.parse(raw) as T;
+}
+
 export type { Platform, HealthStatus, Priority, Source } from "../../shared/types";
 
 export interface Snapshot {
@@ -94,8 +103,9 @@ export async function loadDocs(): Promise<DocFile[]> {
   let entries: string[] = [];
   try {
     entries = await readdir(DOCS_DIR);
-  } catch {
-    return [];
+  } catch (error) {
+    if (isMissingFileError(error)) return [];
+    throw error;
   }
 
   const sorted = entries
@@ -112,8 +122,9 @@ export async function loadDocs(): Promise<DocFile[]> {
         title: titleMatch ? titleMatch[1].trim() : filename,
         content,
       });
-    } catch {
-      continue;
+    } catch (error) {
+      if (isMissingFileError(error)) continue;
+      throw error;
     }
   }
   return docs;
@@ -121,11 +132,11 @@ export async function loadDocs(): Promise<DocFile[]> {
 
 export async function loadSources(): Promise<Source[]> {
   try {
-    const raw = await readFile(SOURCES_PATH, "utf-8");
-    const json = JSON.parse(raw) as { sources: Source[] };
+    const json = await readJsonFile<{ sources: Source[] }>(SOURCES_PATH);
     return json.sources;
-  } catch {
-    return [];
+  } catch (error) {
+    if (isMissingFileError(error)) return [];
+    throw error;
   }
 }
 
@@ -141,10 +152,10 @@ function snapshotScoreToPercent(snapshot: Snapshot): number | null {
 
 export async function loadLatest(): Promise<LatestSummary | null> {
   try {
-    const raw = await readFile(LATEST_PATH, "utf-8");
-    return JSON.parse(raw) as LatestSummary;
-  } catch {
-    return null;
+    return await readJsonFile<LatestSummary>(LATEST_PATH);
+  } catch (error) {
+    if (isMissingFileError(error)) return null;
+    throw error;
   }
 }
 
@@ -152,15 +163,15 @@ export async function loadHealthHistory(): Promise<HealthHistoryPoint[]> {
   let entries: string[] = [];
   try {
     entries = await readdir(join(ROOT, "data", "health"));
-  } catch {
-    return [];
+  } catch (error) {
+    if (isMissingFileError(error)) return [];
+    throw error;
   }
 
   const history: HealthHistoryPoint[] = [];
   for (const filename of entries.filter((f) => f.endsWith(".json")).sort()) {
     try {
-      const raw = await readFile(join(ROOT, "data", "health", filename), "utf-8");
-      const snapshot = JSON.parse(raw) as LatestSummary;
+      const snapshot = await readJsonFile<LatestSummary>(join(ROOT, "data", "health", filename));
       const scored = snapshot.snapshots
         .map((item) => snapshotScoreToPercent(item))
         .filter((score): score is number => score !== null);
@@ -173,8 +184,9 @@ export async function loadHealthHistory(): Promise<HealthHistoryPoint[]> {
         dead_count: byStatus.dead ?? 0,
         total_sources: snapshot.total_sources,
       });
-    } catch {
-      continue;
+    } catch (error) {
+      if (isMissingFileError(error)) continue;
+      throw error;
     }
   }
 
@@ -183,9 +195,9 @@ export async function loadHealthHistory(): Promise<HealthHistoryPoint[]> {
 
 export async function loadTopicDiscovery(): Promise<TopicDiscovery | null> {
   try {
-    const raw = await readFile(TOPIC_DISCOVERY_PATH, "utf-8");
-    return JSON.parse(raw) as TopicDiscovery;
-  } catch {
-    return null;
+    return await readJsonFile<TopicDiscovery>(TOPIC_DISCOVERY_PATH);
+  } catch (error) {
+    if (isMissingFileError(error)) return null;
+    throw error;
   }
 }

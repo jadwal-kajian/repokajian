@@ -116,6 +116,7 @@ function LeafletRegionMap({
   useEffect(() => {
     let cancelled = false;
     let resizeObserver: ResizeObserver | null = null;
+    let tileFallbackTimer: number | null = null;
 
     async function initMap() {
       const L = await import("leaflet");
@@ -131,11 +132,23 @@ function LeafletRegionMap({
         scrollWheelZoom: false,
       });
 
-      const tileLayer = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+      const markTilesReady = () => {
+        if (tileFallbackTimer) {
+          window.clearTimeout(tileFallbackTimer);
+          tileFallbackTimer = null;
+        }
+        setTilesReady(true);
+      };
+
+      L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
       })
-        .on("loading", () => setTilesReady(false))
-        .on("load", () => setTilesReady(true))
+        .on("loading", () => {
+          setTilesReady(false);
+          if (tileFallbackTimer) window.clearTimeout(tileFallbackTimer);
+          tileFallbackTimer = window.setTimeout(markTilesReady, 3_000);
+        })
+        .on("load", markTilesReady)
         .addTo(map);
 
       markerLayerRef.current = L.layerGroup().addTo(map);
@@ -150,13 +163,14 @@ function LeafletRegionMap({
       resizeObserver.observe(mapContainer);
 
       setMapReady(true);
-      setTilesReady(tileLayer.isLoading ? !tileLayer.isLoading() : true);
+      tileFallbackTimer = window.setTimeout(markTilesReady, 3_000);
     }
 
     initMap();
 
     return () => {
       cancelled = true;
+      if (tileFallbackTimer) window.clearTimeout(tileFallbackTimer);
       resizeObserver?.disconnect();
       mapRef.current?.remove();
       mapRef.current = null;
