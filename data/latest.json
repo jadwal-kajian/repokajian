@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-10-27T21:16:11.154Z",
+  "generated_at": "2026-10-29T21:42:36.937Z",
   "version": "v1.0.0",
   "total_sources": 102,
   "monitored_sources": 87,
   "by_status": {
-    "active": 66,
-    "stale": 2,
+    "active": 65,
+    "stale": 3,
     "dead": 8,
     "blocked": 11,
     "error": 0,
@@ -20,7 +20,7 @@
   "snapshots": [
     {
       "source_id": "tg-mthilyatunnisa",
-      "last_checked_at": "2026-10-27T21:08:21.320Z",
+      "last_checked_at": "2026-10-29T21:34:40.534Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -33,23 +33,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=6020, last_post=2026-10-27T20:53:03.000Z)"
+          "details": "Parsed metrics from public HTML (subs=6020, last_post=2026-10-29T21:04:39.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T20:53:03.000Z"
+          "details": "Last post detected at 2026-10-29T21:04:39.000Z"
         }
       ],
       "metrics": {
         "subscribers": 6020,
-        "last_post_at": "2026-10-27T20:53:03.000Z",
-        "last_post_age_hours": 0.3
+        "last_post_at": "2026-10-29T21:04:39.000Z",
+        "last_post_age_hours": 0.5
       }
     },
     {
       "source_id": "tg-kajianustadzafifi",
-      "last_checked_at": "2026-10-27T21:08:26.854Z",
+      "last_checked_at": "2026-10-29T21:34:46.179Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -62,23 +62,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2070, last_post=2026-10-27T12:56:58.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2060, last_post=2026-10-29T12:55:30.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T12:56:58.000Z"
+          "details": "Last post detected at 2026-10-29T12:55:30.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 2070,
-        "last_post_at": "2026-10-27T12:56:58.000Z",
-        "last_post_age_hours": 8.2
+        "subscribers": 2060,
+        "last_post_at": "2026-10-29T12:55:30.000Z",
+        "last_post_age_hours": 8.7
       }
     },
     {
       "source_id": "tg-gresikmengaji",
-      "last_checked_at": "2026-10-27T21:08:32.308Z",
+      "last_checked_at": "2026-10-29T21:34:51.654Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -91,23 +91,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=532, last_post=2026-10-27T15:04:35.000Z)"
+          "details": "Parsed metrics from public HTML (subs=530, last_post=2026-10-29T21:31:28.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:04:35.000Z"
+          "details": "Last post detected at 2026-10-29T21:31:28.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 532,
-        "last_post_at": "2026-10-27T15:04:35.000Z",
-        "last_post_age_hours": 6.1
+        "subscribers": 530,
+        "last_post_at": "2026-10-29T21:31:28.000Z",
+        "last_post_age_hours": 0.1
       }
     },
     {
       "source_id": "tg-khalidbasalamahofficial",
-      "last_checked_at": "2026-10-27T21:08:37.882Z",
+      "last_checked_at": "2026-10-29T21:34:57.228Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -120,23 +120,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=69700, last_post=2026-10-27T13:06:28.000Z)"
+          "details": "Parsed metrics from public HTML (subs=69600, last_post=2026-10-29T21:32:25.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:06:28.000Z"
+          "details": "Last post detected at 2026-10-29T21:32:25.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 69700,
-        "last_post_at": "2026-10-27T13:06:28.000Z",
-        "last_post_age_hours": 8
+        "subscribers": 69600,
+        "last_post_at": "2026-10-29T21:32:25.000Z",
+        "last_post_age_hours": 0
       }
     },
     {
       "source_id": "tg-fawaid-kangaswad",
-      "last_checked_at": "2026-10-27T21:08:43.383Z",
+      "last_checked_at": "2026-10-29T21:35:02.788Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -149,23 +149,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=12900, last_post=2026-10-27T15:31:29.000Z)"
+          "details": "Parsed metrics from public HTML (subs=12900, last_post=2026-10-29T06:17:12.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:31:29.000Z"
+          "details": "Last post detected at 2026-10-29T06:17:12.000Z"
         }
       ],
       "metrics": {
         "subscribers": 12900,
-        "last_post_at": "2026-10-27T15:31:29.000Z",
-        "last_post_age_hours": 5.6
+        "last_post_at": "2026-10-29T06:17:12.000Z",
+        "last_post_age_hours": 15.3
       }
     },
     {
       "source_id": "tg-muflihsafitraofficial",
-      "last_checked_at": "2026-10-27T21:08:48.801Z",
+      "last_checked_at": "2026-10-29T21:35:08.281Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -178,23 +178,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=7890, last_post=2026-10-27T07:11:35.000Z)"
+          "details": "Parsed metrics from public HTML (subs=7880, last_post=2026-10-29T07:56:05.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T07:11:35.000Z"
+          "details": "Last post detected at 2026-10-29T07:56:05.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 7890,
-        "last_post_at": "2026-10-27T07:11:35.000Z",
-        "last_post_age_hours": 14
+        "subscribers": 7880,
+        "last_post_at": "2026-10-29T07:56:05.000Z",
+        "last_post_age_hours": 13.7
       }
     },
     {
       "source_id": "tg-ngangsukawruh",
-      "last_checked_at": "2026-10-27T21:08:54.286Z",
+      "last_checked_at": "2026-10-29T21:35:13.789Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -207,7 +207,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=3640, last_post=2026-03-07T18:31:19.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3630, last_post=2026-03-07T18:31:19.000Z)"
         },
         {
           "name": "freshness",
@@ -216,14 +216,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 3640,
+        "subscribers": 3630,
         "last_post_at": "2026-03-07T18:31:19.000Z",
-        "last_post_age_hours": 5618.6
+        "last_post_age_hours": 5667.1
       }
     },
     {
       "source_id": "tg-jadwalkajiankaskus",
-      "last_checked_at": "2026-10-27T21:08:59.750Z",
+      "last_checked_at": "2026-10-29T21:35:19.281Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.25,
@@ -252,7 +252,7 @@
     },
     {
       "source_id": "tg-infokajiansunnahsby",
-      "last_checked_at": "2026-10-27T21:09:05.303Z",
+      "last_checked_at": "2026-10-29T21:35:24.978Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -265,23 +265,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=843, last_post=2026-10-27T07:45:58.000Z)"
+          "details": "Parsed metrics from public HTML (subs=841, last_post=2026-10-28T23:15:07.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T07:45:58.000Z"
+          "details": "Last post detected at 2026-10-28T23:15:07.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 843,
-        "last_post_at": "2026-10-27T07:45:58.000Z",
-        "last_post_age_hours": 13.4
+        "subscribers": 841,
+        "last_post_at": "2026-10-28T23:15:07.000Z",
+        "last_post_age_hours": 22.3
       }
     },
     {
       "source_id": "tg-jadwalkajiansunnah",
-      "last_checked_at": "2026-10-27T21:09:10.737Z",
+      "last_checked_at": "2026-10-29T21:35:30.446Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -294,23 +294,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2060, last_post=2026-10-27T15:34:05.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2060, last_post=2026-10-29T21:04:20.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:34:05.000Z"
+          "details": "Last post detected at 2026-10-29T21:04:20.000Z"
         }
       ],
       "metrics": {
         "subscribers": 2060,
-        "last_post_at": "2026-10-27T15:34:05.000Z",
-        "last_post_age_hours": 5.6
+        "last_post_at": "2026-10-29T21:04:20.000Z",
+        "last_post_age_hours": 0.5
       }
     },
     {
       "source_id": "tg-rodjatv",
-      "last_checked_at": "2026-10-27T21:09:16.225Z",
+      "last_checked_at": "2026-10-29T21:35:35.955Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -323,23 +323,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=10000, last_post=2026-10-27T05:41:21.000Z)"
+          "details": "Parsed metrics from public HTML (subs=9990, last_post=2026-10-29T07:03:25.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T05:41:21.000Z"
+          "details": "Last post detected at 2026-10-29T07:03:25.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 10000,
-        "last_post_at": "2026-10-27T05:41:21.000Z",
-        "last_post_age_hours": 15.5
+        "subscribers": 9990,
+        "last_post_at": "2026-10-29T07:03:25.000Z",
+        "last_post_age_hours": 14.5
       }
     },
     {
       "source_id": "tg-yufidtv",
-      "last_checked_at": "2026-10-27T21:09:21.742Z",
+      "last_checked_at": "2026-10-29T21:35:41.496Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -352,23 +352,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=26000, last_post=2026-10-27T15:02:31.000Z)"
+          "details": "Parsed metrics from public HTML (subs=26000, last_post=2026-10-29T06:53:08.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:02:31.000Z"
+          "details": "Last post detected at 2026-10-29T06:53:08.000Z"
         }
       ],
       "metrics": {
         "subscribers": 26000,
-        "last_post_at": "2026-10-27T15:02:31.000Z",
-        "last_post_age_hours": 6.1
+        "last_post_at": "2026-10-29T06:53:08.000Z",
+        "last_post_age_hours": 14.7
       }
     },
     {
       "source_id": "tg-muslimorid",
-      "last_checked_at": "2026-10-27T21:09:27.213Z",
+      "last_checked_at": "2026-10-29T21:35:47.101Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -381,23 +381,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=32600, last_post=2026-10-27T15:44:55.000Z)"
+          "details": "Parsed metrics from public HTML (subs=32600, last_post=2026-10-29T13:57:25.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:44:55.000Z"
+          "details": "Last post detected at 2026-10-29T13:57:25.000Z"
         }
       ],
       "metrics": {
         "subscribers": 32600,
-        "last_post_at": "2026-10-27T15:44:55.000Z",
-        "last_post_age_hours": 5.4
+        "last_post_at": "2026-10-29T13:57:25.000Z",
+        "last_post_age_hours": 7.6
       }
     },
     {
       "source_id": "tg-bbgalilmu",
-      "last_checked_at": "2026-10-27T21:09:32.602Z",
+      "last_checked_at": "2026-10-29T21:35:52.530Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -410,7 +410,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=93, last_post=n/a)"
+          "details": "Parsed metrics from public HTML (subs=91, last_post=n/a)"
         },
         {
           "name": "freshness",
@@ -419,14 +419,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 93,
+        "subscribers": 91,
         "last_post_at": null,
         "last_post_age_hours": null
       }
     },
     {
       "source_id": "tg-kajianislampedia",
-      "last_checked_at": "2026-10-27T21:09:38.159Z",
+      "last_checked_at": "2026-10-29T21:35:58.219Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -450,12 +450,12 @@
       "metrics": {
         "subscribers": null,
         "last_post_at": "2024-01-23T03:31:01.000Z",
-        "last_post_age_hours": 24209.6
+        "last_post_age_hours": 24258.1
       }
     },
     {
       "source_id": "tg-jadwalkajianid",
-      "last_checked_at": "2026-10-27T21:09:43.490Z",
+      "last_checked_at": "2026-10-29T21:36:03.618Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -468,23 +468,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=4000, last_post=2026-10-27T15:23:44.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3990, last_post=2026-10-29T15:31:33.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:23:44.000Z"
+          "details": "Last post detected at 2026-10-29T15:31:33.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 4000,
-        "last_post_at": "2026-10-27T15:23:44.000Z",
-        "last_post_age_hours": 5.8
+        "subscribers": 3990,
+        "last_post_at": "2026-10-29T15:31:33.000Z",
+        "last_post_age_hours": 6.1
       }
     },
     {
       "source_id": "tg-jadwalkajian-id",
-      "last_checked_at": "2026-10-27T21:09:48.976Z",
+      "last_checked_at": "2026-10-29T21:36:09.241Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -497,23 +497,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=550, last_post=2026-10-27T15:26:51.000Z)"
+          "details": "Parsed metrics from public HTML (subs=550, last_post=2026-10-29T15:33:58.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:26:51.000Z"
+          "details": "Last post detected at 2026-10-29T15:33:58.000Z"
         }
       ],
       "metrics": {
         "subscribers": 550,
-        "last_post_at": "2026-10-27T15:26:51.000Z",
-        "last_post_age_hours": 5.7
+        "last_post_at": "2026-10-29T15:33:58.000Z",
+        "last_post_age_hours": 6
       }
     },
     {
       "source_id": "tg-syafiqrizabasalamah",
-      "last_checked_at": "2026-10-27T21:09:54.461Z",
+      "last_checked_at": "2026-10-29T21:36:14.825Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -537,12 +537,12 @@
       "metrics": {
         "subscribers": 80,
         "last_post_at": "2017-05-31T02:03:16.000Z",
-        "last_post_age_hours": 82483.1
+        "last_post_age_hours": 82531.5
       }
     },
     {
       "source_id": "tg-hsi-abdullahroy",
-      "last_checked_at": "2026-10-27T21:09:59.773Z",
+      "last_checked_at": "2026-10-29T21:36:20.263Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.25,
@@ -571,7 +571,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian",
-      "last_checked_at": "2026-10-27T21:10:05.322Z",
+      "last_checked_at": "2026-10-29T21:36:25.946Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -600,10 +600,10 @@
     },
     {
       "source_id": "tg-madrasahms",
-      "last_checked_at": "2026-10-27T21:10:10.881Z",
+      "last_checked_at": "2026-10-29T21:36:31.635Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 0.93,
+      "confidence_score": 1,
       "checks": [
         {
           "name": "http_fetch",
@@ -613,23 +613,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=6600, last_post=2026-10-24T07:46:17.000Z)"
+          "details": "Parsed metrics from public HTML (subs=6590, last_post=2026-10-29T13:03:47.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-24T07:46:17.000Z"
+          "details": "Last post detected at 2026-10-29T13:03:47.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 6600,
-        "last_post_at": "2026-10-24T07:46:17.000Z",
-        "last_post_age_hours": 85.4
+        "subscribers": 6590,
+        "last_post_at": "2026-10-29T13:03:47.000Z",
+        "last_post_age_hours": 8.5
       }
     },
     {
       "source_id": "tg-cahayasunnahkarawang",
-      "last_checked_at": "2026-10-27T21:10:16.373Z",
+      "last_checked_at": "2026-10-29T21:36:37.340Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 0.93,
@@ -653,12 +653,12 @@
       "metrics": {
         "subscribers": 640,
         "last_post_at": "2026-10-23T21:09:17.000Z",
-        "last_post_age_hours": 96
+        "last_post_age_hours": 144.5
       }
     },
     {
       "source_id": "tg-kajiangabunganmtnurulhidayah",
-      "last_checked_at": "2026-10-27T21:10:21.783Z",
+      "last_checked_at": "2026-10-29T21:36:42.825Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -671,7 +671,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=176, last_post=2026-09-10T03:23:22.000Z)"
+          "details": "Parsed metrics from public HTML (subs=178, last_post=2026-09-10T03:23:22.000Z)"
         },
         {
           "name": "freshness",
@@ -680,14 +680,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 176,
+        "subscribers": 178,
         "last_post_at": "2026-09-10T03:23:22.000Z",
-        "last_post_age_hours": 1145.8
+        "last_post_age_hours": 1194.2
       }
     },
     {
       "source_id": "tg-mttabiinacc",
-      "last_checked_at": "2026-10-27T21:10:27.263Z",
+      "last_checked_at": "2026-10-29T21:36:48.383Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -700,23 +700,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=189, last_post=2026-10-27T02:04:08.000Z)"
+          "details": "Parsed metrics from public HTML (subs=189, last_post=2026-10-28T01:06:04.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T02:04:08.000Z"
+          "details": "Last post detected at 2026-10-28T01:06:04.000Z"
         }
       ],
       "metrics": {
         "subscribers": 189,
-        "last_post_at": "2026-10-27T02:04:08.000Z",
-        "last_post_age_hours": 19.1
+        "last_post_at": "2026-10-28T01:06:04.000Z",
+        "last_post_age_hours": 44.5
       }
     },
     {
       "source_id": "tg-mt-al-mawaddah",
-      "last_checked_at": "2026-10-27T21:10:32.629Z",
+      "last_checked_at": "2026-10-29T21:36:53.804Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -740,12 +740,12 @@
       "metrics": {
         "subscribers": 193,
         "last_post_at": "2026-10-27T05:00:25.000Z",
-        "last_post_age_hours": 16.2
+        "last_post_age_hours": 64.6
       }
     },
     {
       "source_id": "tg-madinahsalam",
-      "last_checked_at": "2026-10-27T21:10:37.993Z",
+      "last_checked_at": "2026-10-29T21:36:59.281Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -769,12 +769,12 @@
       "metrics": {
         "subscribers": 11600,
         "last_post_at": "2026-09-04T11:26:23.000Z",
-        "last_post_age_hours": 1281.7
+        "last_post_age_hours": 1330.2
       }
     },
     {
       "source_id": "tg-rumahdakwahuk",
-      "last_checked_at": "2026-10-27T21:10:43.423Z",
+      "last_checked_at": "2026-10-29T21:37:04.802Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 0.93,
@@ -798,12 +798,12 @@
       "metrics": {
         "subscribers": 342,
         "last_post_at": "2026-10-24T19:34:01.000Z",
-        "last_post_age_hours": 73.6
+        "last_post_age_hours": 122.1
       }
     },
     {
       "source_id": "tg-ahsantvofficial",
-      "last_checked_at": "2026-10-27T21:10:48.783Z",
+      "last_checked_at": "2026-10-29T21:37:10.235Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -816,23 +816,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=635, last_post=2026-10-26T23:05:08.000Z)"
+          "details": "Parsed metrics from public HTML (subs=636, last_post=2026-10-29T11:21:48.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T23:05:08.000Z"
+          "details": "Last post detected at 2026-10-29T11:21:48.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 635,
-        "last_post_at": "2026-10-26T23:05:08.000Z",
-        "last_post_age_hours": 22.1
+        "subscribers": 636,
+        "last_post_at": "2026-10-29T11:21:48.000Z",
+        "last_post_age_hours": 10.3
       }
     },
     {
       "source_id": "tg-akademimuslimah",
-      "last_checked_at": "2026-10-27T21:10:54.212Z",
+      "last_checked_at": "2026-10-29T21:37:15.744Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -845,26 +845,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2520, last_post=2026-10-26T12:44:32.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2520, last_post=2026-10-29T13:41:53.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T12:44:32.000Z"
+          "details": "Last post detected at 2026-10-29T13:41:53.000Z"
         }
       ],
       "metrics": {
         "subscribers": 2520,
-        "last_post_at": "2026-10-26T12:44:32.000Z",
-        "last_post_age_hours": 32.4
+        "last_post_at": "2026-10-29T13:41:53.000Z",
+        "last_post_age_hours": 7.9
       }
     },
     {
       "source_id": "tg-almughnicenter",
-      "last_checked_at": "2026-10-27T21:10:59.625Z",
+      "last_checked_at": "2026-10-29T21:37:21.201Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 1,
+      "confidence_score": 0.93,
       "checks": [
         {
           "name": "http_fetch",
@@ -874,7 +874,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=412, last_post=2026-10-25T13:13:22.000Z)"
+          "details": "Parsed metrics from public HTML (subs=409, last_post=2026-10-25T13:13:22.000Z)"
         },
         {
           "name": "freshness",
@@ -883,14 +883,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 412,
+        "subscribers": 409,
         "last_post_at": "2026-10-25T13:13:22.000Z",
-        "last_post_age_hours": 56
+        "last_post_age_hours": 104.4
       }
     },
     {
       "source_id": "tg-anbofficial",
-      "last_checked_at": "2026-10-27T21:11:04.995Z",
+      "last_checked_at": "2026-10-29T21:37:26.695Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -903,23 +903,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=9540, last_post=2026-10-27T08:56:14.000Z)"
+          "details": "Parsed metrics from public HTML (subs=9540, last_post=2026-10-29T11:25:07.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T08:56:14.000Z"
+          "details": "Last post detected at 2026-10-29T11:25:07.000Z"
         }
       ],
       "metrics": {
         "subscribers": 9540,
-        "last_post_at": "2026-10-27T08:56:14.000Z",
-        "last_post_age_hours": 12.2
+        "last_post_at": "2026-10-29T11:25:07.000Z",
+        "last_post_age_hours": 10.2
       }
     },
     {
       "source_id": "tg-babussalamassunnah",
-      "last_checked_at": "2026-10-27T21:11:10.495Z",
+      "last_checked_at": "2026-10-29T21:37:32.296Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -932,23 +932,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1640, last_post=2026-10-25T09:01:43.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1640, last_post=2026-10-29T04:44:39.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-25T09:01:43.000Z"
+          "details": "Last post detected at 2026-10-29T04:44:39.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1640,
-        "last_post_at": "2026-10-25T09:01:43.000Z",
-        "last_post_age_hours": 60.2
+        "last_post_at": "2026-10-29T04:44:39.000Z",
+        "last_post_age_hours": 16.9
       }
     },
     {
       "source_id": "tg-bestie-mengaji",
-      "last_checked_at": "2026-10-27T21:11:15.885Z",
+      "last_checked_at": "2026-10-29T21:37:37.776Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 0.93,
@@ -972,12 +972,12 @@
       "metrics": {
         "subscribers": 172,
         "last_post_at": "2026-10-24T05:46:39.000Z",
-        "last_post_age_hours": 87.4
+        "last_post_age_hours": 135.8
       }
     },
     {
       "source_id": "tg-daarunnisaaindonesia",
-      "last_checked_at": "2026-10-27T21:11:21.425Z",
+      "last_checked_at": "2026-10-29T21:37:43.347Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -990,23 +990,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=12400, last_post=2026-10-27T13:56:04.000Z)"
+          "details": "Parsed metrics from public HTML (subs=12400, last_post=2026-10-29T11:18:44.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:56:04.000Z"
+          "details": "Last post detected at 2026-10-29T11:18:44.000Z"
         }
       ],
       "metrics": {
         "subscribers": 12400,
-        "last_post_at": "2026-10-27T13:56:04.000Z",
-        "last_post_age_hours": 7.3
+        "last_post_at": "2026-10-29T11:18:44.000Z",
+        "last_post_age_hours": 10.3
       }
     },
     {
       "source_id": "tg-dirosahislamiyah",
-      "last_checked_at": "2026-10-27T21:11:26.996Z",
+      "last_checked_at": "2026-10-29T21:37:48.915Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1019,23 +1019,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=3140, last_post=2026-10-27T14:00:37.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3140, last_post=2026-10-29T13:06:37.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T14:00:37.000Z"
+          "details": "Last post detected at 2026-10-29T13:06:37.000Z"
         }
       ],
       "metrics": {
         "subscribers": 3140,
-        "last_post_at": "2026-10-27T14:00:37.000Z",
-        "last_post_age_hours": 7.2
+        "last_post_at": "2026-10-29T13:06:37.000Z",
+        "last_post_age_hours": 8.5
       }
     },
     {
       "source_id": "tg-djazuliruhanbasyir",
-      "last_checked_at": "2026-10-27T21:11:32.369Z",
+      "last_checked_at": "2026-10-29T21:37:54.392Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1048,23 +1048,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=515, last_post=2026-10-27T12:23:10.000Z)"
+          "details": "Parsed metrics from public HTML (subs=514, last_post=2026-10-28T13:28:23.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T12:23:10.000Z"
+          "details": "Last post detected at 2026-10-28T13:28:23.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 515,
-        "last_post_at": "2026-10-27T12:23:10.000Z",
-        "last_post_age_hours": 8.8
+        "subscribers": 514,
+        "last_post_at": "2026-10-28T13:28:23.000Z",
+        "last_post_age_hours": 32.2
       }
     },
     {
       "source_id": "tg-dzulqarnainms",
-      "last_checked_at": "2026-10-27T21:11:37.904Z",
+      "last_checked_at": "2026-10-29T21:37:59.959Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1077,26 +1077,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=13600, last_post=2026-10-27T13:45:58.000Z)"
+          "details": "Parsed metrics from public HTML (subs=13600, last_post=2026-10-29T11:12:07.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:45:58.000Z"
+          "details": "Last post detected at 2026-10-29T11:12:07.000Z"
         }
       ],
       "metrics": {
         "subscribers": 13600,
-        "last_post_at": "2026-10-27T13:45:58.000Z",
-        "last_post_age_hours": 7.4
+        "last_post_at": "2026-10-29T11:12:07.000Z",
+        "last_post_age_hours": 10.4
       }
     },
     {
       "source_id": "tg-fastabiqulkhayraataustralia",
-      "last_checked_at": "2026-10-27T21:11:43.260Z",
+      "last_checked_at": "2026-10-29T21:38:05.428Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 0.93,
+      "confidence_score": 1,
       "checks": [
         {
           "name": "http_fetch",
@@ -1106,23 +1106,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=350, last_post=2026-10-22T22:49:00.000Z)"
+          "details": "Parsed metrics from public HTML (subs=350, last_post=2026-10-29T09:56:48.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-22T22:49:00.000Z"
+          "details": "Last post detected at 2026-10-29T09:56:48.000Z"
         }
       ],
       "metrics": {
         "subscribers": 350,
-        "last_post_at": "2026-10-22T22:49:00.000Z",
-        "last_post_age_hours": 118.4
+        "last_post_at": "2026-10-29T09:56:48.000Z",
+        "last_post_age_hours": 11.7
       }
     },
     {
       "source_id": "tg-hsiberbagi",
-      "last_checked_at": "2026-10-27T21:11:48.701Z",
+      "last_checked_at": "2026-10-29T21:38:10.980Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -1135,7 +1135,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=639, last_post=2026-07-03T00:38:05.000Z)"
+          "details": "Parsed metrics from public HTML (subs=640, last_post=2026-07-03T00:38:05.000Z)"
         },
         {
           "name": "freshness",
@@ -1144,14 +1144,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 639,
+        "subscribers": 640,
         "last_post_at": "2026-07-03T00:38:05.000Z",
-        "last_post_age_hours": 2804.6
+        "last_post_age_hours": 2853
       }
     },
     {
       "source_id": "tg-imammalikbandung",
-      "last_checked_at": "2026-10-27T21:11:54.113Z",
+      "last_checked_at": "2026-10-29T21:38:16.471Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1164,23 +1164,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=401, last_post=2026-10-27T12:21:09.000Z)"
+          "details": "Parsed metrics from public HTML (subs=401, last_post=2026-10-29T13:07:26.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T12:21:09.000Z"
+          "details": "Last post detected at 2026-10-29T13:07:26.000Z"
         }
       ],
       "metrics": {
         "subscribers": 401,
-        "last_post_at": "2026-10-27T12:21:09.000Z",
-        "last_post_age_hours": 8.8
+        "last_post_at": "2026-10-29T13:07:26.000Z",
+        "last_post_age_hours": 8.5
       }
     },
     {
       "source_id": "tg-indonesiabertauhid",
-      "last_checked_at": "2026-10-27T21:11:59.506Z",
+      "last_checked_at": "2026-10-29T21:38:21.965Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1193,23 +1193,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=20400, last_post=2026-10-27T11:13:52.000Z)"
+          "details": "Parsed metrics from public HTML (subs=20400, last_post=2026-10-29T21:34:06.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T11:13:52.000Z"
+          "details": "Last post detected at 2026-10-29T21:34:06.000Z"
         }
       ],
       "metrics": {
         "subscribers": 20400,
-        "last_post_at": "2026-10-27T11:13:52.000Z",
-        "last_post_age_hours": 10
+        "last_post_at": "2026-10-29T21:34:06.000Z",
+        "last_post_age_hours": 0.1
       }
     },
     {
       "source_id": "tg-infokajiansunnahgis",
-      "last_checked_at": "2026-10-27T21:12:04.915Z",
+      "last_checked_at": "2026-10-29T21:38:27.424Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1222,23 +1222,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2140, last_post=2026-10-27T15:11:29.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2150, last_post=2026-10-29T14:36:41.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T15:11:29.000Z"
+          "details": "Last post detected at 2026-10-29T14:36:41.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 2140,
-        "last_post_at": "2026-10-27T15:11:29.000Z",
-        "last_post_age_hours": 6
+        "subscribers": 2150,
+        "last_post_at": "2026-10-29T14:36:41.000Z",
+        "last_post_age_hours": 7
       }
     },
     {
       "source_id": "tg-journeymuflihsafitra",
-      "last_checked_at": "2026-10-27T21:12:10.342Z",
+      "last_checked_at": "2026-10-29T21:38:32.891Z",
       "platform": "tg",
       "status": "stale",
       "confidence_score": 0.72,
@@ -1262,12 +1262,12 @@
       "metrics": {
         "subscribers": 115,
         "last_post_at": "2026-10-09T03:03:44.000Z",
-        "last_post_age_hours": 450.1
+        "last_post_age_hours": 498.6
       }
     },
     {
       "source_id": "tg-kajiansisesa",
-      "last_checked_at": "2026-10-27T21:12:15.786Z",
+      "last_checked_at": "2026-10-29T21:38:38.353Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1280,23 +1280,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=5890, last_post=2026-10-27T13:55:54.000Z)"
+          "details": "Parsed metrics from public HTML (subs=5880, last_post=2026-10-29T14:57:53.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:55:54.000Z"
+          "details": "Last post detected at 2026-10-29T14:57:53.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 5890,
-        "last_post_at": "2026-10-27T13:55:54.000Z",
-        "last_post_age_hours": 7.3
+        "subscribers": 5880,
+        "last_post_at": "2026-10-29T14:57:53.000Z",
+        "last_post_age_hours": 6.7
       }
     },
     {
       "source_id": "tg-kajiankakyogi",
-      "last_checked_at": "2026-10-27T21:12:21.296Z",
+      "last_checked_at": "2026-10-29T21:38:43.846Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 0.93,
@@ -1309,7 +1309,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1360, last_post=2026-10-23T10:38:18.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1350, last_post=2026-10-23T10:38:18.000Z)"
         },
         {
           "name": "freshness",
@@ -1318,14 +1318,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 1360,
+        "subscribers": 1350,
         "last_post_at": "2026-10-23T10:38:18.000Z",
-        "last_post_age_hours": 106.6
+        "last_post_age_hours": 155
       }
     },
     {
       "source_id": "tg-kajiankhasanah",
-      "last_checked_at": "2026-10-27T21:12:26.714Z",
+      "last_checked_at": "2026-10-29T21:38:49.327Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -1338,7 +1338,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=402, last_post=n/a)"
+          "details": "Parsed metrics from public HTML (subs=400, last_post=n/a)"
         },
         {
           "name": "freshness",
@@ -1347,14 +1347,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 402,
+        "subscribers": 400,
         "last_post_at": null,
         "last_post_age_hours": null
       }
     },
     {
       "source_id": "tg-kajianmaira",
-      "last_checked_at": "2026-10-27T21:12:32.271Z",
+      "last_checked_at": "2026-10-29T21:38:55.031Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1367,23 +1367,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=405, last_post=2026-10-27T06:47:39.000Z)"
+          "details": "Parsed metrics from public HTML (subs=404, last_post=2026-10-29T06:00:37.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T06:47:39.000Z"
+          "details": "Last post detected at 2026-10-29T06:00:37.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 405,
-        "last_post_at": "2026-10-27T06:47:39.000Z",
-        "last_post_age_hours": 14.4
+        "subscribers": 404,
+        "last_post_at": "2026-10-29T06:00:37.000Z",
+        "last_post_age_hours": 15.6
       }
     },
     {
       "source_id": "tg-kajiantebet",
-      "last_checked_at": "2026-10-27T21:12:37.678Z",
+      "last_checked_at": "2026-10-29T21:39:00.531Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -1412,7 +1412,7 @@
     },
     {
       "source_id": "tg-kajianustadzabduh",
-      "last_checked_at": "2026-10-27T21:12:43.234Z",
+      "last_checked_at": "2026-10-29T21:39:06.220Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1425,23 +1425,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=4760, last_post=2026-10-27T02:36:14.000Z)"
+          "details": "Parsed metrics from public HTML (subs=4760, last_post=2026-10-29T14:08:05.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T02:36:14.000Z"
+          "details": "Last post detected at 2026-10-29T14:08:05.000Z"
         }
       ],
       "metrics": {
         "subscribers": 4760,
-        "last_post_at": "2026-10-27T02:36:14.000Z",
-        "last_post_age_hours": 18.6
+        "last_post_at": "2026-10-29T14:08:05.000Z",
+        "last_post_age_hours": 7.5
       }
     },
     {
       "source_id": "tg-kakerlanbercerita",
-      "last_checked_at": "2026-10-27T21:12:48.646Z",
+      "last_checked_at": "2026-10-29T21:39:11.846Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1454,23 +1454,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=8240, last_post=2026-10-27T10:38:05.000Z)"
+          "details": "Parsed metrics from public HTML (subs=8230, last_post=2026-10-29T12:13:58.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T10:38:05.000Z"
+          "details": "Last post detected at 2026-10-29T12:13:58.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 8240,
-        "last_post_at": "2026-10-27T10:38:05.000Z",
-        "last_post_age_hours": 10.6
+        "subscribers": 8230,
+        "last_post_at": "2026-10-29T12:13:58.000Z",
+        "last_post_age_hours": 9.4
       }
     },
     {
       "source_id": "tg-majelisilmubalikpapan",
-      "last_checked_at": "2026-10-27T21:12:54.090Z",
+      "last_checked_at": "2026-10-29T21:39:17.383Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1483,26 +1483,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=4680, last_post=2026-10-27T08:33:17.000Z)"
+          "details": "Parsed metrics from public HTML (subs=4680, last_post=2026-10-29T08:10:02.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T08:33:17.000Z"
+          "details": "Last post detected at 2026-10-29T08:10:02.000Z"
         }
       ],
       "metrics": {
         "subscribers": 4680,
-        "last_post_at": "2026-10-27T08:33:17.000Z",
-        "last_post_age_hours": 12.7
+        "last_post_at": "2026-10-29T08:10:02.000Z",
+        "last_post_age_hours": 13.5
       }
     },
     {
       "source_id": "tg-majelisimamnawawi",
-      "last_checked_at": "2026-10-27T21:12:59.552Z",
+      "last_checked_at": "2026-10-29T21:39:22.905Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 0.93,
+      "confidence_score": 1,
       "checks": [
         {
           "name": "http_fetch",
@@ -1512,23 +1512,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1100, last_post=2026-10-23T12:50:12.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1100, last_post=2026-10-29T12:33:52.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-23T12:50:12.000Z"
+          "details": "Last post detected at 2026-10-29T12:33:52.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1100,
-        "last_post_at": "2026-10-23T12:50:12.000Z",
-        "last_post_age_hours": 104.4
+        "last_post_at": "2026-10-29T12:33:52.000Z",
+        "last_post_age_hours": 9.1
       }
     },
     {
       "source_id": "tg-majelistaklim-inammuslimah",
-      "last_checked_at": "2026-10-27T21:13:05.093Z",
+      "last_checked_at": "2026-10-29T21:39:28.455Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -1557,7 +1557,7 @@
     },
     {
       "source_id": "tg-masjidalhayah",
-      "last_checked_at": "2026-10-27T21:13:10.636Z",
+      "last_checked_at": "2026-10-29T21:39:34.133Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -1586,7 +1586,7 @@
     },
     {
       "source_id": "tg-masjidalkautsarsolo",
-      "last_checked_at": "2026-10-27T21:13:16.213Z",
+      "last_checked_at": "2026-10-29T21:39:39.822Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -1599,7 +1599,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=20, last_post=n/a)"
+          "details": "Parsed metrics from public HTML (subs=21, last_post=n/a)"
         },
         {
           "name": "freshness",
@@ -1608,17 +1608,17 @@
         }
       ],
       "metrics": {
-        "subscribers": 20,
+        "subscribers": 21,
         "last_post_at": null,
         "last_post_age_hours": null
       }
     },
     {
       "source_id": "tg-masjidhijauofficial",
-      "last_checked_at": "2026-10-27T21:13:21.755Z",
+      "last_checked_at": "2026-10-29T21:39:45.503Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 0.93,
+      "confidence_score": 1,
       "checks": [
         {
           "name": "http_fetch",
@@ -1628,23 +1628,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=820, last_post=2026-10-22T16:43:54.000Z)"
+          "details": "Parsed metrics from public HTML (subs=820, last_post=2026-10-29T08:32:58.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-22T16:43:54.000Z"
+          "details": "Last post detected at 2026-10-29T08:32:58.000Z"
         }
       ],
       "metrics": {
         "subscribers": 820,
-        "last_post_at": "2026-10-22T16:43:54.000Z",
-        "last_post_age_hours": 124.5
+        "last_post_at": "2026-10-29T08:32:58.000Z",
+        "last_post_age_hours": 13.1
       }
     },
     {
       "source_id": "tg-masjidjamilurrahmanjogja",
-      "last_checked_at": "2026-10-27T21:13:27.188Z",
+      "last_checked_at": "2026-10-29T21:39:50.979Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -1657,7 +1657,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=55, last_post=2026-05-26T02:58:55.000Z)"
+          "details": "Parsed metrics from public HTML (subs=56, last_post=2026-05-26T02:58:55.000Z)"
         },
         {
           "name": "freshness",
@@ -1666,17 +1666,17 @@
         }
       ],
       "metrics": {
-        "subscribers": 55,
+        "subscribers": 56,
         "last_post_at": "2026-05-26T02:58:55.000Z",
-        "last_post_age_hours": 3714.2
+        "last_post_age_hours": 3762.7
       }
     },
     {
       "source_id": "tg-masjidmenaraiman",
-      "last_checked_at": "2026-10-27T21:13:32.585Z",
+      "last_checked_at": "2026-10-29T21:39:56.455Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 0.93,
+      "confidence_score": 1,
       "checks": [
         {
           "name": "http_fetch",
@@ -1686,23 +1686,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=273, last_post=2026-10-24T02:37:12.000Z)"
+          "details": "Parsed metrics from public HTML (subs=273, last_post=2026-10-29T01:09:57.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-24T02:37:12.000Z"
+          "details": "Last post detected at 2026-10-29T01:09:57.000Z"
         }
       ],
       "metrics": {
         "subscribers": 273,
-        "last_post_at": "2026-10-24T02:37:12.000Z",
-        "last_post_age_hours": 90.6
+        "last_post_at": "2026-10-29T01:09:57.000Z",
+        "last_post_age_hours": 20.5
       }
     },
     {
       "source_id": "tg-masjidnurullah",
-      "last_checked_at": "2026-10-27T21:13:38.077Z",
+      "last_checked_at": "2026-10-29T21:40:01.943Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1715,23 +1715,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2340, last_post=2026-10-26T11:18:23.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2340, last_post=2026-10-29T01:22:02.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T11:18:23.000Z"
+          "details": "Last post detected at 2026-10-29T01:22:02.000Z"
         }
       ],
       "metrics": {
         "subscribers": 2340,
-        "last_post_at": "2026-10-26T11:18:23.000Z",
-        "last_post_age_hours": 33.9
+        "last_post_at": "2026-10-29T01:22:02.000Z",
+        "last_post_age_hours": 20.3
       }
     },
     {
       "source_id": "tg-masjidpogungdalangan",
-      "last_checked_at": "2026-10-27T21:13:43.492Z",
+      "last_checked_at": "2026-10-29T21:40:07.399Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1744,23 +1744,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=2330, last_post=2026-10-27T13:00:57.000Z)"
+          "details": "Parsed metrics from public HTML (subs=2330, last_post=2026-10-29T12:52:13.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:00:57.000Z"
+          "details": "Last post detected at 2026-10-29T12:52:13.000Z"
         }
       ],
       "metrics": {
         "subscribers": 2330,
-        "last_post_at": "2026-10-27T13:00:57.000Z",
-        "last_post_age_hours": 8.2
+        "last_post_at": "2026-10-29T12:52:13.000Z",
+        "last_post_age_hours": 8.8
       }
     },
     {
       "source_id": "tg-masjidpogungraya",
-      "last_checked_at": "2026-10-27T21:13:48.929Z",
+      "last_checked_at": "2026-10-29T21:40:12.856Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1773,23 +1773,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1060, last_post=2026-10-27T11:40:20.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1060, last_post=2026-10-29T10:23:10.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T11:40:20.000Z"
+          "details": "Last post detected at 2026-10-29T10:23:10.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1060,
-        "last_post_at": "2026-10-27T11:40:20.000Z",
-        "last_post_age_hours": 9.6
+        "last_post_at": "2026-10-29T10:23:10.000Z",
+        "last_post_age_hours": 11.3
       }
     },
     {
       "source_id": "tg-mnibmsquarelt7",
-      "last_checked_at": "2026-10-27T21:13:54.337Z",
+      "last_checked_at": "2026-10-29T21:40:18.356Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1802,26 +1802,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=7630, last_post=2026-10-27T04:53:17.000Z)"
+          "details": "Parsed metrics from public HTML (subs=7620, last_post=2026-10-28T12:33:14.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T04:53:17.000Z"
+          "details": "Last post detected at 2026-10-28T12:33:14.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 7630,
-        "last_post_at": "2026-10-27T04:53:17.000Z",
-        "last_post_age_hours": 16.3
+        "subscribers": 7620,
+        "last_post_at": "2026-10-28T12:33:14.000Z",
+        "last_post_age_hours": 33.1
       }
     },
     {
       "source_id": "tg-msaalfata",
-      "last_checked_at": "2026-10-27T21:13:59.698Z",
+      "last_checked_at": "2026-10-29T21:40:23.835Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 1,
+      "confidence_score": 0.93,
       "checks": [
         {
           "name": "http_fetch",
@@ -1842,12 +1842,12 @@
       "metrics": {
         "subscribers": 145,
         "last_post_at": "2026-10-25T02:57:21.000Z",
-        "last_post_age_hours": 66.3
+        "last_post_age_hours": 114.7
       }
     },
     {
       "source_id": "tg-mt-awwaabiin",
-      "last_checked_at": "2026-10-27T21:14:05.213Z",
+      "last_checked_at": "2026-10-29T21:40:29.336Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1860,23 +1860,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=411, last_post=2026-10-26T22:34:37.000Z)"
+          "details": "Parsed metrics from public HTML (subs=410, last_post=2026-10-29T03:16:42.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T22:34:37.000Z"
+          "details": "Last post detected at 2026-10-29T03:16:42.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 411,
-        "last_post_at": "2026-10-26T22:34:37.000Z",
-        "last_post_age_hours": 22.7
+        "subscribers": 410,
+        "last_post_at": "2026-10-29T03:16:42.000Z",
+        "last_post_age_hours": 18.4
       }
     },
     {
       "source_id": "tg-mt-khadiijah",
-      "last_checked_at": "2026-10-27T21:14:10.587Z",
+      "last_checked_at": "2026-10-29T21:40:34.809Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1889,23 +1889,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1630, last_post=2026-10-26T22:28:49.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1620, last_post=2026-10-28T22:33:07.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T22:28:49.000Z"
+          "details": "Last post detected at 2026-10-28T22:33:07.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 1630,
-        "last_post_at": "2026-10-26T22:28:49.000Z",
-        "last_post_age_hours": 22.8
+        "subscribers": 1620,
+        "last_post_at": "2026-10-28T22:33:07.000Z",
+        "last_post_age_hours": 23.1
       }
     },
     {
       "source_id": "tg-mtalikhlashjbe",
-      "last_checked_at": "2026-10-27T21:14:16.064Z",
+      "last_checked_at": "2026-10-29T21:40:40.316Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1918,23 +1918,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=96, last_post=2026-10-24T23:04:49.000Z)"
+          "details": "Parsed metrics from public HTML (subs=96, last_post=2026-10-27T22:01:05.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-24T23:04:49.000Z"
+          "details": "Last post detected at 2026-10-27T22:01:05.000Z"
         }
       ],
       "metrics": {
         "subscribers": 96,
-        "last_post_at": "2026-10-24T23:04:49.000Z",
-        "last_post_age_hours": 70.2
+        "last_post_at": "2026-10-27T22:01:05.000Z",
+        "last_post_age_hours": 47.7
       }
     },
     {
       "source_id": "tg-muadzbinjabal",
-      "last_checked_at": "2026-10-27T21:14:21.486Z",
+      "last_checked_at": "2026-10-29T21:40:45.829Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1947,23 +1947,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1960, last_post=2026-10-26T10:35:22.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1960, last_post=2026-10-29T14:04:33.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-26T10:35:22.000Z"
+          "details": "Last post detected at 2026-10-29T14:04:33.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1960,
-        "last_post_at": "2026-10-26T10:35:22.000Z",
-        "last_post_age_hours": 34.6
+        "last_post_at": "2026-10-29T14:04:33.000Z",
+        "last_post_age_hours": 7.6
       }
     },
     {
       "source_id": "tg-muhammadnuzuldzikri",
-      "last_checked_at": "2026-10-27T21:14:26.844Z",
+      "last_checked_at": "2026-10-29T21:40:51.313Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -1976,23 +1976,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=49700, last_post=2026-10-27T09:17:05.000Z)"
+          "details": "Parsed metrics from public HTML (subs=49600, last_post=2026-10-29T09:06:01.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T09:17:05.000Z"
+          "details": "Last post detected at 2026-10-29T09:06:01.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 49700,
-        "last_post_at": "2026-10-27T09:17:05.000Z",
-        "last_post_age_hours": 12
+        "subscribers": 49600,
+        "last_post_at": "2026-10-29T09:06:01.000Z",
+        "last_post_age_hours": 12.6
       }
     },
     {
       "source_id": "tg-muniralearningpartner",
-      "last_checked_at": "2026-10-27T21:14:32.249Z",
+      "last_checked_at": "2026-10-29T21:40:56.744Z",
       "platform": "tg",
       "status": "stale",
       "confidence_score": 0.72,
@@ -2016,12 +2016,12 @@
       "metrics": {
         "subscribers": 4060,
         "last_post_at": "2026-10-13T12:59:41.000Z",
-        "last_post_age_hours": 344.2
+        "last_post_age_hours": 392.7
       }
     },
     {
       "source_id": "tg-muslimafiyah",
-      "last_checked_at": "2026-10-27T21:14:37.652Z",
+      "last_checked_at": "2026-10-29T21:41:02.213Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2034,26 +2034,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=17400, last_post=2026-10-27T03:58:53.000Z)"
+          "details": "Parsed metrics from public HTML (subs=17400, last_post=2026-10-28T07:17:39.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T03:58:53.000Z"
+          "details": "Last post detected at 2026-10-28T07:17:39.000Z"
         }
       ],
       "metrics": {
         "subscribers": 17400,
-        "last_post_at": "2026-10-27T03:58:53.000Z",
-        "last_post_age_hours": 17.3
+        "last_post_at": "2026-10-28T07:17:39.000Z",
+        "last_post_age_hours": 38.4
       }
     },
     {
       "source_id": "tg-mutiarailmunafi",
-      "last_checked_at": "2026-10-27T21:14:43.300Z",
+      "last_checked_at": "2026-10-29T21:41:07.656Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 1,
+      "confidence_score": 0.93,
       "checks": [
         {
           "name": "http_fetch",
@@ -2063,7 +2063,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=3950, last_post=2026-10-26T12:26:59.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3940, last_post=2026-10-26T12:26:59.000Z)"
         },
         {
           "name": "freshness",
@@ -2072,14 +2072,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 3950,
+        "subscribers": 3940,
         "last_post_at": "2026-10-26T12:26:59.000Z",
-        "last_post_age_hours": 32.8
+        "last_post_age_hours": 81.2
       }
     },
     {
       "source_id": "tg-najmiumar",
-      "last_checked_at": "2026-10-27T21:14:48.734Z",
+      "last_checked_at": "2026-10-29T21:41:13.202Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2092,23 +2092,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=31200, last_post=2026-10-27T09:23:37.000Z)"
+          "details": "Parsed metrics from public HTML (subs=31200, last_post=2026-10-29T14:35:36.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T09:23:37.000Z"
+          "details": "Last post detected at 2026-10-29T14:35:36.000Z"
         }
       ],
       "metrics": {
         "subscribers": 31200,
-        "last_post_at": "2026-10-27T09:23:37.000Z",
-        "last_post_age_hours": 11.9
+        "last_post_at": "2026-10-29T14:35:36.000Z",
+        "last_post_age_hours": 7.1
       }
     },
     {
       "source_id": "tg-penuntutilmubogor",
-      "last_checked_at": "2026-10-27T21:14:54.192Z",
+      "last_checked_at": "2026-10-29T21:41:18.801Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -2137,7 +2137,7 @@
     },
     {
       "source_id": "tg-pesantrenluluwalmarjan",
-      "last_checked_at": "2026-10-27T21:14:59.750Z",
+      "last_checked_at": "2026-10-29T21:41:24.491Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2150,26 +2150,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=249, last_post=2026-10-27T11:17:43.000Z)"
+          "details": "Parsed metrics from public HTML (subs=248, last_post=2026-10-29T11:12:01.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T11:17:43.000Z"
+          "details": "Last post detected at 2026-10-29T11:12:01.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 249,
-        "last_post_at": "2026-10-27T11:17:43.000Z",
-        "last_post_age_hours": 10
+        "subscribers": 248,
+        "last_post_at": "2026-10-29T11:12:01.000Z",
+        "last_post_age_hours": 10.5
       }
     },
     {
       "source_id": "tg-pomm-id",
-      "last_checked_at": "2026-10-27T21:15:05.189Z",
+      "last_checked_at": "2026-10-29T21:41:29.940Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 1,
+      "confidence_score": 0.93,
       "checks": [
         {
           "name": "http_fetch",
@@ -2179,7 +2179,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=751, last_post=2026-10-25T00:57:28.000Z)"
+          "details": "Parsed metrics from public HTML (subs=750, last_post=2026-10-25T00:57:28.000Z)"
         },
         {
           "name": "freshness",
@@ -2188,14 +2188,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 751,
+        "subscribers": 750,
         "last_post_at": "2026-10-25T00:57:28.000Z",
-        "last_post_age_hours": 68.3
+        "last_post_age_hours": 116.7
       }
     },
     {
       "source_id": "tg-radiotarbiyahsunnah",
-      "last_checked_at": "2026-10-27T21:15:10.712Z",
+      "last_checked_at": "2026-10-29T21:41:35.531Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2208,26 +2208,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=3500, last_post=2026-10-27T13:26:39.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3500, last_post=2026-10-29T13:15:05.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T13:26:39.000Z"
+          "details": "Last post detected at 2026-10-29T13:15:05.000Z"
         }
       ],
       "metrics": {
         "subscribers": 3500,
-        "last_post_at": "2026-10-27T13:26:39.000Z",
-        "last_post_age_hours": 7.8
+        "last_post_at": "2026-10-29T13:15:05.000Z",
+        "last_post_age_hours": 8.4
       }
     },
     {
       "source_id": "tg-sahabatmuslimtv",
-      "last_checked_at": "2026-10-27T21:15:16.121Z",
+      "last_checked_at": "2026-10-29T21:41:41.093Z",
       "platform": "tg",
-      "status": "active",
-      "confidence_score": 0.93,
+      "status": "stale",
+      "confidence_score": 0.82,
       "checks": [
         {
           "name": "http_fetch",
@@ -2237,7 +2237,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=309, last_post=2026-10-22T09:32:07.000Z)"
+          "details": "Parsed metrics from public HTML (subs=308, last_post=2026-10-22T09:32:07.000Z)"
         },
         {
           "name": "freshness",
@@ -2246,14 +2246,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 309,
+        "subscribers": 308,
         "last_post_at": "2026-10-22T09:32:07.000Z",
-        "last_post_age_hours": 131.7
+        "last_post_age_hours": 180.2
       }
     },
     {
       "source_id": "tg-salamtsl",
-      "last_checked_at": "2026-10-27T21:15:21.534Z",
+      "last_checked_at": "2026-10-29T21:41:46.514Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2266,26 +2266,26 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=3310, last_post=2026-10-27T11:56:56.000Z)"
+          "details": "Parsed metrics from public HTML (subs=3310, last_post=2026-10-29T10:10:48.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T11:56:56.000Z"
+          "details": "Last post detected at 2026-10-29T10:10:48.000Z"
         }
       ],
       "metrics": {
         "subscribers": 3310,
-        "last_post_at": "2026-10-27T11:56:56.000Z",
-        "last_post_age_hours": 9.3
+        "last_post_at": "2026-10-29T10:10:48.000Z",
+        "last_post_age_hours": 11.5
       }
     },
     {
       "source_id": "tg-simamedia",
-      "last_checked_at": "2026-10-27T21:15:27.039Z",
+      "last_checked_at": "2026-10-29T21:41:52.044Z",
       "platform": "tg",
       "status": "active",
-      "confidence_score": 1,
+      "confidence_score": 0.93,
       "checks": [
         {
           "name": "http_fetch",
@@ -2306,12 +2306,12 @@
       "metrics": {
         "subscribers": 47,
         "last_post_at": "2026-10-25T12:57:57.000Z",
-        "last_post_age_hours": 56.3
+        "last_post_age_hours": 104.7
       }
     },
     {
       "source_id": "tg-stdiis-jember",
-      "last_checked_at": "2026-10-27T21:15:32.464Z",
+      "last_checked_at": "2026-10-29T21:41:57.611Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2324,23 +2324,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=628, last_post=2026-10-27T10:57:11.000Z)"
+          "details": "Parsed metrics from public HTML (subs=628, last_post=2026-10-29T21:08:55.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T10:57:11.000Z"
+          "details": "Last post detected at 2026-10-29T21:08:55.000Z"
         }
       ],
       "metrics": {
         "subscribers": 628,
-        "last_post_at": "2026-10-27T10:57:11.000Z",
-        "last_post_age_hours": 10.3
+        "last_post_at": "2026-10-29T21:08:55.000Z",
+        "last_post_age_hours": 0.6
       }
     },
     {
       "source_id": "tg-surabayamengaji",
-      "last_checked_at": "2026-10-27T21:15:37.902Z",
+      "last_checked_at": "2026-10-29T21:42:03.165Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2353,23 +2353,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=8760, last_post=2026-10-27T12:42:10.000Z)"
+          "details": "Parsed metrics from public HTML (subs=8750, last_post=2026-10-29T13:05:22.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T12:42:10.000Z"
+          "details": "Last post detected at 2026-10-29T13:05:22.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 8760,
-        "last_post_at": "2026-10-27T12:42:10.000Z",
+        "subscribers": 8750,
+        "last_post_at": "2026-10-29T13:05:22.000Z",
         "last_post_age_hours": 8.6
       }
     },
     {
       "source_id": "tg-tunanetraindonesiamengaji",
-      "last_checked_at": "2026-10-27T21:15:43.308Z",
+      "last_checked_at": "2026-10-29T21:42:08.650Z",
       "platform": "tg",
       "status": "blocked",
       "confidence_score": 0.65,
@@ -2382,7 +2382,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=477, last_post=n/a)"
+          "details": "Parsed metrics from public HTML (subs=478, last_post=n/a)"
         },
         {
           "name": "freshness",
@@ -2391,14 +2391,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 477,
+        "subscribers": 478,
         "last_post_at": null,
         "last_post_age_hours": null
       }
     },
     {
       "source_id": "tg-ustadnizarsaadjabal",
-      "last_checked_at": "2026-10-27T21:15:48.872Z",
+      "last_checked_at": "2026-10-29T21:42:14.339Z",
       "platform": "tg",
       "status": "dead",
       "confidence_score": 0.65,
@@ -2411,7 +2411,7 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=639, last_post=2026-08-11T02:47:53.000Z)"
+          "details": "Parsed metrics from public HTML (subs=638, last_post=2026-08-11T02:47:53.000Z)"
         },
         {
           "name": "freshness",
@@ -2420,14 +2420,14 @@
         }
       ],
       "metrics": {
-        "subscribers": 639,
+        "subscribers": 638,
         "last_post_at": "2026-08-11T02:47:53.000Z",
-        "last_post_age_hours": 1866.5
+        "last_post_age_hours": 1914.9
       }
     },
     {
       "source_id": "tg-ustadzabdullahzaen",
-      "last_checked_at": "2026-10-27T21:15:54.349Z",
+      "last_checked_at": "2026-10-29T21:42:19.874Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2440,23 +2440,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=9930, last_post=2026-10-27T12:10:21.000Z)"
+          "details": "Parsed metrics from public HTML (subs=9920, last_post=2026-10-29T11:51:00.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T12:10:21.000Z"
+          "details": "Last post detected at 2026-10-29T11:51:00.000Z"
         }
       ],
       "metrics": {
-        "subscribers": 9930,
-        "last_post_at": "2026-10-27T12:10:21.000Z",
-        "last_post_age_hours": 9.1
+        "subscribers": 9920,
+        "last_post_at": "2026-10-29T11:51:00.000Z",
+        "last_post_age_hours": 9.9
       }
     },
     {
       "source_id": "tg-ustadziqbalgunawan",
-      "last_checked_at": "2026-10-27T21:15:59.747Z",
+      "last_checked_at": "2026-10-29T21:42:25.353Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2480,12 +2480,12 @@
       "metrics": {
         "subscribers": 177,
         "last_post_at": "2026-10-27T01:07:26.000Z",
-        "last_post_age_hours": 20.1
+        "last_post_age_hours": 68.6
       }
     },
     {
       "source_id": "tg-wlingimengaji",
-      "last_checked_at": "2026-10-27T21:16:05.176Z",
+      "last_checked_at": "2026-10-29T21:42:30.924Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2498,23 +2498,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1190, last_post=2026-10-27T00:38:43.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1190, last_post=2026-10-28T02:12:48.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-27T00:38:43.000Z"
+          "details": "Last post detected at 2026-10-28T02:12:48.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1190,
-        "last_post_at": "2026-10-27T00:38:43.000Z",
-        "last_post_age_hours": 20.6
+        "last_post_at": "2026-10-28T02:12:48.000Z",
+        "last_post_age_hours": 43.5
       }
     },
     {
       "source_id": "tg-ypia-academy",
-      "last_checked_at": "2026-10-27T21:16:10.582Z",
+      "last_checked_at": "2026-10-29T21:42:36.384Z",
       "platform": "tg",
       "status": "active",
       "confidence_score": 1,
@@ -2527,23 +2527,23 @@
         {
           "name": "content_parse",
           "ok": true,
-          "details": "Parsed metrics from public HTML (subs=1130, last_post=2026-10-25T09:17:12.000Z)"
+          "details": "Parsed metrics from public HTML (subs=1130, last_post=2026-10-29T14:29:14.000Z)"
         },
         {
           "name": "freshness",
           "ok": true,
-          "details": "Last post detected at 2026-10-25T09:17:12.000Z"
+          "details": "Last post detected at 2026-10-29T14:29:14.000Z"
         }
       ],
       "metrics": {
         "subscribers": 1130,
-        "last_post_at": "2026-10-25T09:17:12.000Z",
-        "last_post_age_hours": 60
+        "last_post_at": "2026-10-29T14:29:14.000Z",
+        "last_post_age_hours": 7.2
       }
     },
     {
       "source_id": "web-portalkajian",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2558,7 +2558,7 @@
     },
     {
       "source_id": "web-jadwalkajian-com",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2573,7 +2573,7 @@
     },
     {
       "source_id": "web-forumkajian",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2588,7 +2588,7 @@
     },
     {
       "source_id": "web-cintasedekah",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2603,7 +2603,7 @@
     },
     {
       "source_id": "web-hsi",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "web",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2618,7 +2618,7 @@
     },
     {
       "source_id": "ig-hsi-abdullahroy",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2633,7 +2633,7 @@
     },
     {
       "source_id": "ig-hsiberbagi",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2648,7 +2648,7 @@
     },
     {
       "source_id": "ig-bmthsi",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2663,7 +2663,7 @@
     },
     {
       "source_id": "ig-majalahhsi",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2678,7 +2678,7 @@
     },
     {
       "source_id": "ig-hsikibar",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "ig",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2693,7 +2693,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-yogyakarta",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2708,7 +2708,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-cimahi",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2723,7 +2723,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-bandung",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2738,7 +2738,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-kuningan",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": null,
@@ -2753,7 +2753,7 @@
     },
     {
       "source_id": "tg-sijadwalkajian-depok",
-      "last_checked_at": "2026-10-27T21:08:21.319Z",
+      "last_checked_at": "2026-10-29T21:34:40.533Z",
       "platform": "tg",
       "status": "unmonitored",
       "confidence_score": null,
